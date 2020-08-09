@@ -14,7 +14,8 @@ class SFSymbolVerticalListCell: UICollectionViewListCell {
     
     override func updateConfiguration(using state: UICellConfigurationState) {
         
-        // Create a new background configuration so that the cell must always have systemFill background color
+        // Create a new background configuration so that
+        // the cell must always have systemBackground background color
         // This will remove the gray background when cell is selected
         var newBgConfiguration = UIBackgroundConfiguration.listGroupedCell()
         newBgConfiguration.backgroundColor = .systemBackground
@@ -27,7 +28,7 @@ class SFSymbolVerticalListCell: UICollectionViewListCell {
         newConfiguration.name = item?.name
         newConfiguration.symbol = item?.image
 
-        // Set content confiugration in order to update custom content view
+        // Set content configuration in order to update custom content view
         contentConfiguration = newConfiguration
         
     }

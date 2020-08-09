@@ -12,22 +12,20 @@ class SFSymbolVerticalContentView: UIView, UIContentView {
     
     let nameLabel = UILabel()
     let symbolImageView = UIImageView()
-    
-    // Conform to UIContentView
-    // Must make configuration as computed property becuase to satisfy UIContentView protocol requirement
-    // Create a private currentConfiguration to hold the value with actual data type
-    // currentConfiguration will be force unwrapped because MyCustomContentView must have a configuration
+
     private var currentConfiguration: SFSymbolContentConfiguration!
     var configuration: UIContentConfiguration {
         get {
             currentConfiguration
         }
         set {
+            // Make sure the given configuration is of type SFSymbolContentConfiguration
             guard let newConfiguration = newValue as? SFSymbolContentConfiguration else {
                 return
             }
             
-            // Keep track on current configuration and apply it to MyCustomContentView
+            // Apply the new configuration to SFSymbolVerticalContentView
+            // also update currentConfiguration to newConfiguration
             apply(configuration: newConfiguration)
         }
     }
@@ -36,7 +34,7 @@ class SFSymbolVerticalContentView: UIView, UIContentView {
     init(configuration: SFSymbolContentConfiguration) {
         super.init(frame: .zero)
         
-        // Create the custom content view UI
+        // Create the content view UI
         setupAllViews()
         
         // Apply the configuration (set data to UI elements / define custom content view appearance)
@@ -92,14 +90,17 @@ private extension SFSymbolVerticalContentView {
         
         // Set font weight
         if let fontWeight = configuration.fontWeight {
-            nameLabel.font = UIFont.systemFont(ofSize: nameLabel.font.pointSize, weight: fontWeight)
+            nameLabel.font = UIFont.systemFont(ofSize: nameLabel.font.pointSize,
+                                               weight: fontWeight)
         }
         
         // Set symbol color & weight
         if
             let symbolColor = configuration.symbolColor,
             let symbolWeight = configuration.symbolWeight {
-            var symbol = configuration.symbol?.withConfiguration(UIImage.SymbolConfiguration(weight: symbolWeight))
+            
+            let symbolConfig = UIImage.SymbolConfiguration(weight: symbolWeight)
+            var symbol = configuration.symbol?.withConfiguration(symbolConfig)
             symbol = symbol?.withTintColor(symbolColor, renderingMode: .alwaysOriginal)
             symbolImageView.image = symbol
         }

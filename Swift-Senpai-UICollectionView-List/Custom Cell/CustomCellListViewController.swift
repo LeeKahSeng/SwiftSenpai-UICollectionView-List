@@ -71,13 +71,12 @@ class CustomCellListViewController: UIViewController {
         let cellRegistration = UICollectionView.CellRegistration<SFSymbolVerticalListCell, SFSymbolItem> { (cell, indexPath, item) in
             
             // For custom cell, we just need to assign the data item to the cell.
-            // We will let the custom cell's updateConfiguration(using:) method to assign the content configuration to the cell
+            // The custom cell's updateConfiguration(using:) method will assign the
+            // content configuration to the cell
             cell.item = item
         }
         
-        // Create a diffable data source by passing in a collection view and a cell provider closure.
-        // This will connect the diffable data source with the view controller.
-        // Item data type and identifier data type matched each other.
+        // Define data source
         dataSource = UICollectionViewDiffableDataSource<Section, SFSymbolItem>(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, identifier: SFSymbolItem) -> UICollectionViewCell? in
             

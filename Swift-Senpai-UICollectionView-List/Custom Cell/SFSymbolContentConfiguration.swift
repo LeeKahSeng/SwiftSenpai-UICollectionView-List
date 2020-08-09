@@ -8,10 +8,8 @@
 import Foundation
 import UIKit
 
-// Act as view model
 struct SFSymbolContentConfiguration: UIContentConfiguration, Hashable {
     
-    // All will be optional
     var name: String?
     var symbol: UIImage?
     var nameColor: UIColor?
@@ -27,10 +25,12 @@ struct SFSymbolContentConfiguration: UIContentConfiguration, Hashable {
         
         // Perform update on parameters that does not related to cell's data itesm
         
+        // Make sure we are dealing with instance of UICellConfigurationState
         guard let state = state as? UICellConfigurationState else {
             return self
         }
         
+        // Updater self based on the current state
         var updatedConfiguration = self
         if state.isSelected {
             // Selected state
