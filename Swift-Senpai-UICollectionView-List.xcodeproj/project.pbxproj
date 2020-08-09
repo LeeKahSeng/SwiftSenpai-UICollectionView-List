@@ -13,6 +13,10 @@
 		F940B01624C3E259000E6D17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F940B01424C3E259000E6D17 /* Main.storyboard */; };
 		F940B01824C3E25B000E6D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F940B01724C3E25B000E6D17 /* Assets.xcassets */; };
 		F940B01B24C3E25B000E6D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F940B01924C3E25B000E6D17 /* LaunchScreen.storyboard */; };
+		F986E53C24D5AC8F007431C2 /* CustomCellListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986E53B24D5AC8F007431C2 /* CustomCellListViewController.swift */; };
+		F986E53E24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986E53D24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift */; };
+		F986E54024D5AFEE007431C2 /* SFSymbolVerticalContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986E53F24D5AFEE007431C2 /* SFSymbolVerticalContentView.swift */; };
+		F99F952124D67484004C4002 /* SFSymbolVerticalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F952024D67484004C4002 /* SFSymbolVerticalListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		F940B01724C3E25B000E6D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F940B01A24C3E25B000E6D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F940B01C24C3E25B000E6D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F986E53B24D5AC8F007431C2 /* CustomCellListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellListViewController.swift; sourceTree = "<group>"; };
+		F986E53D24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolContentConfiguration.swift; sourceTree = "<group>"; };
+		F986E53F24D5AFEE007431C2 /* SFSymbolVerticalContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolVerticalContentView.swift; sourceTree = "<group>"; };
+		F99F952024D67484004C4002 /* SFSymbolVerticalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolVerticalListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		F940B00D24C3E259000E6D17 /* Swift-Senpai-UICollectionView-List */ = {
 			isa = PBXGroup;
 			children = (
+				F986E53A24D5AC6A007431C2 /* Custom Cell */,
 				F940B00E24C3E259000E6D17 /* AppDelegate.swift */,
 				F940B01024C3E259000E6D17 /* SceneDelegate.swift */,
 				F940B01224C3E259000E6D17 /* BasicListViewController.swift */,
@@ -65,6 +74,17 @@
 				F940B01C24C3E25B000E6D17 /* Info.plist */,
 			);
 			path = "Swift-Senpai-UICollectionView-List";
+			sourceTree = "<group>";
+		};
+		F986E53A24D5AC6A007431C2 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F986E53B24D5AC8F007431C2 /* CustomCellListViewController.swift */,
+				F986E53D24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift */,
+				F99F952024D67484004C4002 /* SFSymbolVerticalListCell.swift */,
+				F986E53F24D5AFEE007431C2 /* SFSymbolVerticalContentView.swift */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F986E53C24D5AC8F007431C2 /* CustomCellListViewController.swift in Sources */,
+				F99F952124D67484004C4002 /* SFSymbolVerticalListCell.swift in Sources */,
 				F940B01324C3E259000E6D17 /* BasicListViewController.swift in Sources */,
 				F940B00F24C3E259000E6D17 /* AppDelegate.swift in Sources */,
 				F940B01124C3E259000E6D17 /* SceneDelegate.swift in Sources */,
+				F986E54024D5AFEE007431C2 /* SFSymbolVerticalContentView.swift in Sources */,
+				F986E53E24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

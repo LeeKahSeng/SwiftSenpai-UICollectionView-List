@@ -59,6 +59,8 @@ class BasicListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Basic List"
+        
         // Create list layout
         var layoutConfig = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         
