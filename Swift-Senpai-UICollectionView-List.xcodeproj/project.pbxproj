@@ -64,10 +64,10 @@
 		F940B00D24C3E259000E6D17 /* Swift-Senpai-UICollectionView-List */ = {
 			isa = PBXGroup;
 			children = (
+				F99C7A0D24E5516F00CFC629 /* Basic List */,
 				F986E53A24D5AC6A007431C2 /* Custom Cell */,
 				F940B00E24C3E259000E6D17 /* AppDelegate.swift */,
 				F940B01024C3E259000E6D17 /* SceneDelegate.swift */,
-				F940B01224C3E259000E6D17 /* BasicListViewController.swift */,
 				F940B01424C3E259000E6D17 /* Main.storyboard */,
 				F940B01724C3E25B000E6D17 /* Assets.xcassets */,
 				F940B01924C3E25B000E6D17 /* LaunchScreen.storyboard */,
@@ -85,6 +85,14 @@
 				F986E53F24D5AFEE007431C2 /* SFSymbolVerticalContentView.swift */,
 			);
 			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		F99C7A0D24E5516F00CFC629 /* Basic List */ = {
+			isa = PBXGroup;
+			children = (
+				F940B01224C3E259000E6D17 /* BasicListViewController.swift */,
+			);
+			path = "Basic List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
