@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F93EA01024E941EE007206EB /* SFSymbolNameContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */; };
+		F93EA01224E941F5007206EB /* SFSymbolNameContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93EA01124E941F5007206EB /* SFSymbolNameContentView.xib */; };
 		F940B00F24C3E259000E6D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940B00E24C3E259000E6D17 /* AppDelegate.swift */; };
 		F940B01124C3E259000E6D17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940B01024C3E259000E6D17 /* SceneDelegate.swift */; };
 		F940B01324C3E259000E6D17 /* BasicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940B01224C3E259000E6D17 /* BasicListViewController.swift */; };
@@ -17,9 +19,14 @@
 		F986E53E24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986E53D24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift */; };
 		F986E54024D5AFEE007431C2 /* SFSymbolVerticalContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986E53F24D5AFEE007431C2 /* SFSymbolVerticalContentView.swift */; };
 		F99F952124D67484004C4002 /* SFSymbolVerticalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F952024D67484004C4002 /* SFSymbolVerticalListCell.swift */; };
+		F9E5E99A24EAC0C900D59C15 /* SFSymbolNameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99924EAC0C900D59C15 /* SFSymbolNameListCell.swift */; };
+		F9E5E99C24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99B24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift */; };
+		F9E5E99E24EAC39000D59C15 /* NameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99D24EAC39000D59C15 /* NameListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameContentView.swift; sourceTree = "<group>"; };
+		F93EA01124E941F5007206EB /* SFSymbolNameContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SFSymbolNameContentView.xib; sourceTree = "<group>"; };
 		F940B00B24C3E259000E6D17 /* Swift-Senpai-UICollectionView-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-Senpai-UICollectionView-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F940B00E24C3E259000E6D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F940B01024C3E259000E6D17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +39,9 @@
 		F986E53D24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolContentConfiguration.swift; sourceTree = "<group>"; };
 		F986E53F24D5AFEE007431C2 /* SFSymbolVerticalContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolVerticalContentView.swift; sourceTree = "<group>"; };
 		F99F952024D67484004C4002 /* SFSymbolVerticalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolVerticalListCell.swift; sourceTree = "<group>"; };
+		F9E5E99924EAC0C900D59C15 /* SFSymbolNameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameListCell.swift; sourceTree = "<group>"; };
+		F9E5E99B24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameContentConfiguration.swift; sourceTree = "<group>"; };
+		F9E5E99D24EAC39000D59C15 /* NameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +74,9 @@
 		F940B00D24C3E259000E6D17 /* Swift-Senpai-UICollectionView-List */ = {
 			isa = PBXGroup;
 			children = (
-				F99C7A0D24E5516F00CFC629 /* Basic List */,
+				F9E5E99824EAC05600D59C15 /* Basic List */,
 				F986E53A24D5AC6A007431C2 /* Custom Cell */,
+				F984D41B24E8C7CB0029679F /* Custom Cell - nib */,
 				F940B00E24C3E259000E6D17 /* AppDelegate.swift */,
 				F940B01024C3E259000E6D17 /* SceneDelegate.swift */,
 				F940B01424C3E259000E6D17 /* Main.storyboard */,
@@ -74,6 +85,18 @@
 				F940B01C24C3E25B000E6D17 /* Info.plist */,
 			);
 			path = "Swift-Senpai-UICollectionView-List";
+			sourceTree = "<group>";
+		};
+		F984D41B24E8C7CB0029679F /* Custom Cell - nib */ = {
+			isa = PBXGroup;
+			children = (
+				F9E5E99D24EAC39000D59C15 /* NameListViewController.swift */,
+				F9E5E99B24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift */,
+				F9E5E99924EAC0C900D59C15 /* SFSymbolNameListCell.swift */,
+				F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */,
+				F93EA01124E941F5007206EB /* SFSymbolNameContentView.xib */,
+			);
+			path = "Custom Cell - nib";
 			sourceTree = "<group>";
 		};
 		F986E53A24D5AC6A007431C2 /* Custom Cell */ = {
@@ -87,7 +110,7 @@
 			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
-		F99C7A0D24E5516F00CFC629 /* Basic List */ = {
+		F9E5E99824EAC05600D59C15 /* Basic List */ = {
 			isa = PBXGroup;
 			children = (
 				F940B01224C3E259000E6D17 /* BasicListViewController.swift */,
@@ -152,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93EA01224E941F5007206EB /* SFSymbolNameContentView.xib in Resources */,
 				F940B01B24C3E25B000E6D17 /* LaunchScreen.storyboard in Resources */,
 				F940B01824C3E25B000E6D17 /* Assets.xcassets in Resources */,
 				F940B01624C3E259000E6D17 /* Main.storyboard in Resources */,
@@ -166,9 +190,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F986E53C24D5AC8F007431C2 /* CustomCellListViewController.swift in Sources */,
+				F9E5E99A24EAC0C900D59C15 /* SFSymbolNameListCell.swift in Sources */,
+				F9E5E99E24EAC39000D59C15 /* NameListViewController.swift in Sources */,
 				F99F952124D67484004C4002 /* SFSymbolVerticalListCell.swift in Sources */,
 				F940B01324C3E259000E6D17 /* BasicListViewController.swift in Sources */,
+				F93EA01024E941EE007206EB /* SFSymbolNameContentView.swift in Sources */,
 				F940B00F24C3E259000E6D17 /* AppDelegate.swift in Sources */,
+				F9E5E99C24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift in Sources */,
 				F940B01124C3E259000E6D17 /* SceneDelegate.swift in Sources */,
 				F986E54024D5AFEE007431C2 /* SFSymbolVerticalContentView.swift in Sources */,
 				F986E53E24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift in Sources */,
