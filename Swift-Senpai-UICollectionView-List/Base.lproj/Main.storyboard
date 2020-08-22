@@ -101,6 +101,31 @@
                                             <segue destination="bdl-qI-lIw" kind="show" id="zNe-Vc-SFu"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="65" id="v4Y-oG-jzs">
+                                        <rect key="frame" x="0.0" y="158" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v4Y-oG-jzs" id="vBd-2w-nAl">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Cell Using Nib File" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HmJ-Q0-kHZ">
+                                                    <rect key="frame" x="20" y="11" width="355" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HmJ-Q0-kHZ" firstAttribute="top" secondItem="vBd-2w-nAl" secondAttribute="topMargin" id="3y6-8M-bPe"/>
+                                                <constraint firstItem="HmJ-Q0-kHZ" firstAttribute="leading" secondItem="vBd-2w-nAl" secondAttribute="leadingMargin" id="DpD-v9-dPn"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HmJ-Q0-kHZ" secondAttribute="trailing" id="tYZ-2W-T9X"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="HmJ-Q0-kHZ" secondAttribute="bottom" id="uEr-Km-mwl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="U8R-IX-MGu" kind="show" id="tsh-FM-ZUh"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -114,6 +139,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJf-L1-5ow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-752.17391304347836" y="109.82142857142857"/>
+        </scene>
+        <!--Name List View Controller-->
+        <scene sceneID="hZB-pl-Pm4">
+            <objects>
+                <viewController id="U8R-IX-MGu" customClass="NameListViewController" customModule="Swift_Senpai_UICollectionView_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tLf-Eu-Wyn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0vH-2d-pJQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DU2-30-77e"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eld-5s-O9x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="1269"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7xC-HJ-GZI">
