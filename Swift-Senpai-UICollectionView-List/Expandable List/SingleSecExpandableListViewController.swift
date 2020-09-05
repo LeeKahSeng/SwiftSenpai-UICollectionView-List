@@ -1,13 +1,17 @@
 //
-//  ExpandableListViewController.swift
+//  SingleSecExpandableListViewController.swift
 //  Swift-Senpai-UICollectionView-List
 //
-//  Created by Lee Kah Seng on 04/09/2020.
+//  Created by Lee Kah Seng on 05/09/2020.
 //
 
 import UIKit
 
-class ExpandableListViewController: UIViewController {
+class SingleSecExpandableListViewController: UIViewController {
+
+    enum Section {
+        case main
+    }
     
     enum ListItem: Hashable {
         case header(HeaderItem)
@@ -19,7 +23,7 @@ class ExpandableListViewController: UIViewController {
         let symbols: [SFSymbolItem]
     }
     
-    let allSections = [
+    let modelObjects = [
         
         HeaderItem(title: "Communication", symbols: [
             SFSymbolItem(name: "mic"),
@@ -66,15 +70,18 @@ class ExpandableListViewController: UIViewController {
     ]
     
     var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<HeaderItem, ListItem>!
-    var dataSourceSnapshot: NSDiffableDataSourceSnapshot<HeaderItem, ListItem>!
+    var dataSource: UICollectionViewDiffableDataSource<Section, ListItem>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Single Section"
 
+        // MARK: Create list layout
         let layoutConfig = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         let listLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
         
+        // MARK: Configure collection view
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: listLayout)
         view.addSubview(collectionView)
         
@@ -87,7 +94,7 @@ class ExpandableListViewController: UIViewController {
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0),
         ])
         
-        // Cell registration
+        // MARK: Cell registration
         let headerCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, HeaderItem> { (cell, indexPath, headerItem) in
             
             // Set headerItem's data to cell
@@ -110,7 +117,8 @@ class ExpandableListViewController: UIViewController {
             cell.contentConfiguration = content
         }
         
-        dataSource = UICollectionViewDiffableDataSource<HeaderItem, ListItem>(collectionView: collectionView) {
+        // MARK: Configure data source
+        dataSource = UICollectionViewDiffableDataSource<Section, ListItem>(collectionView: collectionView) {
             (collectionView, indexPath, listItem) -> UICollectionViewCell? in
             
             switch listItem {
@@ -132,17 +140,18 @@ class ExpandableListViewController: UIViewController {
             }
         }
         
+        // MARK: Setup snapshots
+        var dataSourceSnapshot = NSDiffableDataSourceSnapshot<Section, ListItem>()
         
-        dataSourceSnapshot = NSDiffableDataSourceSnapshot<HeaderItem, ListItem>()
-        
-        // Create sections in data source snapshot
-        dataSourceSnapshot.appendSections(allSections)
+        // Create a section in the data source snapshot
+        dataSourceSnapshot.appendSections([.main])
         dataSource.apply(dataSourceSnapshot)
         
-        for headerItem in allSections {
+        // Create a section snapshot for main section
+        var sectionSnapshot = NSDiffableDataSourceSectionSnapshot<ListItem>()
+        
+        for headerItem in modelObjects {
            
-            var sectionSnapshot = NSDiffableDataSourceSectionSnapshot<ListItem>()
-            
             // Create a header ListItem & append as parent
             let headerListItem = ListItem.header(headerItem)
             sectionSnapshot.append([headerListItem])
@@ -153,11 +162,12 @@ class ExpandableListViewController: UIViewController {
             // Create an array of symbol ListItem & append as child of headerListItem
             let symbolListItemArray = headerItem.symbols.map { ListItem.symbol($0) }
             sectionSnapshot.append(symbolListItemArray, to: headerListItem)
-            
-            // Apply section snapshot to collection view section
-            dataSource.apply(sectionSnapshot, to: headerItem, animatingDifferences: false)
         }
-
+        
+        // Apply section snapshot to main section
+        dataSource.apply(sectionSnapshot, to: .main, animatingDifferences: false)
     }
-
 }
+
+
+
