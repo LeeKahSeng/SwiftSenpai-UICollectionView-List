@@ -19,6 +19,7 @@
 		F986E53E24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986E53D24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift */; };
 		F986E54024D5AFEE007431C2 /* SFSymbolVerticalContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986E53F24D5AFEE007431C2 /* SFSymbolVerticalContentView.swift */; };
 		F99F952124D67484004C4002 /* SFSymbolVerticalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F952024D67484004C4002 /* SFSymbolVerticalListCell.swift */; };
+		F9A404342502535600582192 /* ExpandableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A404332502535600582192 /* ExpandableListViewController.swift */; };
 		F9E5E99A24EAC0C900D59C15 /* SFSymbolNameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99924EAC0C900D59C15 /* SFSymbolNameListCell.swift */; };
 		F9E5E99C24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99B24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift */; };
 		F9E5E99E24EAC39000D59C15 /* NameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99D24EAC39000D59C15 /* NameListViewController.swift */; };
@@ -39,6 +40,7 @@
 		F986E53D24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolContentConfiguration.swift; sourceTree = "<group>"; };
 		F986E53F24D5AFEE007431C2 /* SFSymbolVerticalContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolVerticalContentView.swift; sourceTree = "<group>"; };
 		F99F952024D67484004C4002 /* SFSymbolVerticalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolVerticalListCell.swift; sourceTree = "<group>"; };
+		F9A404332502535600582192 /* ExpandableListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableListViewController.swift; sourceTree = "<group>"; };
 		F9E5E99924EAC0C900D59C15 /* SFSymbolNameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameListCell.swift; sourceTree = "<group>"; };
 		F9E5E99B24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameContentConfiguration.swift; sourceTree = "<group>"; };
 		F9E5E99D24EAC39000D59C15 /* NameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		F940B00D24C3E259000E6D17 /* Swift-Senpai-UICollectionView-List */ = {
 			isa = PBXGroup;
 			children = (
+				F94C4FCE24F69E6500BF6544 /* Expandable List */,
 				F9E5E99824EAC05600D59C15 /* Basic List */,
 				F986E53A24D5AC6A007431C2 /* Custom Cell */,
 				F984D41B24E8C7CB0029679F /* Custom Cell - nib */,
@@ -85,6 +88,14 @@
 				F940B01C24C3E25B000E6D17 /* Info.plist */,
 			);
 			path = "Swift-Senpai-UICollectionView-List";
+			sourceTree = "<group>";
+		};
+		F94C4FCE24F69E6500BF6544 /* Expandable List */ = {
+			isa = PBXGroup;
+			children = (
+				F9A404332502535600582192 /* ExpandableListViewController.swift */,
+			);
+			path = "Expandable List";
 			sourceTree = "<group>";
 		};
 		F984D41B24E8C7CB0029679F /* Custom Cell - nib */ = {
@@ -200,6 +211,7 @@
 				F940B01124C3E259000E6D17 /* SceneDelegate.swift in Sources */,
 				F986E54024D5AFEE007431C2 /* SFSymbolVerticalContentView.swift in Sources */,
 				F986E53E24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift in Sources */,
+				F9A404342502535600582192 /* ExpandableListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

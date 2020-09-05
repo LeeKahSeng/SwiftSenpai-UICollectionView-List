@@ -24,6 +24,22 @@
             </objects>
             <point key="canvasLocation" x="187" y="-162"/>
         </scene>
+        <!--Expandable List View Controller-->
+        <scene sceneID="rLv-sH-a1A">
+            <objects>
+                <viewController id="SgN-7f-Lq0" customClass="ExpandableListViewController" customModule="Swift_Senpai_UICollectionView_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mB7-hI-374">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="71s-e0-JvU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I2D-NA-ZXW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q0W-A8-Dvs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="1017"/>
+        </scene>
         <!--Custom Cell List View Controller-->
         <scene sceneID="rfo-IO-I7I">
             <objects>
@@ -124,6 +140,31 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="U8R-IX-MGu" kind="show" id="tsh-FM-ZUh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="65" id="fML-ma-Idn">
+                                        <rect key="frame" x="0.0" y="223" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fML-ma-Idn" id="a9M-zw-cIc">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expandable List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vq4-4u-gLT">
+                                                    <rect key="frame" x="20" y="11" width="355" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vq4-4u-gLT" firstAttribute="leading" secondItem="a9M-zw-cIc" secondAttribute="leadingMargin" id="9Df-1a-QIP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Vq4-4u-gLT" secondAttribute="bottom" id="CPo-dI-ge8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Vq4-4u-gLT" secondAttribute="trailing" id="Zpz-wb-nrC"/>
+                                                <constraint firstItem="Vq4-4u-gLT" firstAttribute="top" secondItem="a9M-zw-cIc" secondAttribute="topMargin" id="ca9-dX-nyM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SgN-7f-Lq0" kind="show" id="qP8-eH-t1N"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
