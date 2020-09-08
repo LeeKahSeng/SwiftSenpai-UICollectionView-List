@@ -95,8 +95,8 @@
 		F94C4FCE24F69E6500BF6544 /* Expandable List */ = {
 			isa = PBXGroup;
 			children = (
-				F9A404332502535600582192 /* MultiSecExpandableListViewController.swift */,
 				F97AD793250393C1006B9692 /* SingleSecExpandableListViewController.swift */,
+				F9A404332502535600582192 /* MultiSecExpandableListViewController.swift */,
 			);
 			path = "Expandable List";
 			sourceTree = "<group>";

@@ -46,27 +46,6 @@ class SingleSecExpandableListViewController: UIViewController {
             SFSymbolItem(name: "pencil.and.outline"),
         ]),
         
-        HeaderItem(title: "Connectivity", symbols: [
-            SFSymbolItem(name: "personalhotspot"),
-            SFSymbolItem(name: "network"),
-            SFSymbolItem(name: "icloud"),
-            SFSymbolItem(name: "icloud.fill"),
-        ]),
-        
-        HeaderItem(title: "Transportation", symbols: [
-            SFSymbolItem(name: "car"),
-            SFSymbolItem(name: "car.fill"),
-            SFSymbolItem(name: "bus"),
-            SFSymbolItem(name: "bus.fill"),
-        ]),
-        
-        HeaderItem(title: "Nature", symbols: [
-            SFSymbolItem(name: "flame"),
-            SFSymbolItem(name: "flame.fill"),
-            SFSymbolItem(name: "bolt"),
-            SFSymbolItem(name: "bolt.fill")
-        ]),
-        
     ]
     
     var collectionView: UICollectionView!
@@ -95,7 +74,8 @@ class SingleSecExpandableListViewController: UIViewController {
         ])
         
         // MARK: Cell registration
-        let headerCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, HeaderItem> { (cell, indexPath, headerItem) in
+        let headerCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, HeaderItem> {
+            (cell, indexPath, headerItem) in
             
             // Set headerItem's data to cell
             var content = cell.defaultContentConfiguration()
@@ -104,11 +84,12 @@ class SingleSecExpandableListViewController: UIViewController {
             
             // Add outline disclosure accessory
             // With this accessory, the header cell's children will expand / collapse when the header cell is tapped.
-            let disclosureOptions = UICellAccessory.OutlineDisclosureOptions(style: .header)
-            cell.accessories = [.outlineDisclosure(options:disclosureOptions)]
+            let headerDisclosureOption = UICellAccessory.OutlineDisclosureOptions(style: .header)
+            cell.accessories = [.outlineDisclosure(options:headerDisclosureOption)]
         }
         
-        let symbolCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SFSymbolItem> { (cell, indexPath, symbolItem) in
+        let symbolCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SFSymbolItem> {
+            (cell, indexPath, symbolItem) in
             
             // Set symbolItem's data to cell
             var content = cell.defaultContentConfiguration()
@@ -117,7 +98,7 @@ class SingleSecExpandableListViewController: UIViewController {
             cell.contentConfiguration = content
         }
         
-        // MARK: Configure data source
+        // MARK: Initialize data source
         dataSource = UICollectionViewDiffableDataSource<Section, ListItem>(collectionView: collectionView) {
             (collectionView, indexPath, listItem) -> UICollectionViewCell? in
             
