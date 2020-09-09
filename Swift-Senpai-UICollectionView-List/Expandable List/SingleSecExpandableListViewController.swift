@@ -123,28 +123,28 @@ class SingleSecExpandableListViewController: UIViewController {
         
         // MARK: Setup snapshots
         var dataSourceSnapshot = NSDiffableDataSourceSnapshot<Section, ListItem>()
-        
+
         // Create a section in the data source snapshot
         dataSourceSnapshot.appendSections([.main])
         dataSource.apply(dataSourceSnapshot)
         
         // Create a section snapshot for main section
         var sectionSnapshot = NSDiffableDataSourceSectionSnapshot<ListItem>()
-        
+
         for headerItem in modelObjects {
            
             // Create a header ListItem & append as parent
             let headerListItem = ListItem.header(headerItem)
             sectionSnapshot.append([headerListItem])
             
-            // Expand this section by default
-            sectionSnapshot.expand([headerListItem])
-            
-            // Create an array of symbol ListItem & append as child of headerListItem
+            // Create an array of symbol ListItem & append as children of headerListItem
             let symbolListItemArray = headerItem.symbols.map { ListItem.symbol($0) }
             sectionSnapshot.append(symbolListItemArray, to: headerListItem)
+            
+            // Expand this section by default
+            sectionSnapshot.expand([headerListItem])
         }
-        
+
         // Apply section snapshot to main section
         dataSource.apply(sectionSnapshot, to: .main, animatingDifferences: false)
     }
