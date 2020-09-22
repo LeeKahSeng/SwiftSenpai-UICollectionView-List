@@ -274,7 +274,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multi Sections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYW-8f-HOK">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multi Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYW-8f-HOK">
                                                     <rect key="frame" x="20" y="11" width="355" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -288,6 +288,9 @@
                                                 <constraint firstItem="BYW-8f-HOK" firstAttribute="leading" secondItem="vdv-Oc-lc4" secondAttribute="leadingMargin" id="aH4-uA-L6R"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SgN-7f-Lq0" kind="show" id="H79-YV-lhA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
