@@ -8,11 +8,6 @@
 import UIKit
 
 class CustomCellListViewController: UIViewController {
-
-    // Define collection view section
-    enum Section {
-        case main
-    }
     
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, SFSymbolItem>!

@@ -8,16 +8,6 @@
 import UIKit
 
 class MultiSecExpandableListViewController: UIViewController {
-    
-    enum ListItem: Hashable {
-        case header(HeaderItem)
-        case symbol(SFSymbolItem)
-    }
-
-    struct HeaderItem: Hashable {
-        let title: String
-        let symbols: [SFSymbolItem]
-    }
 
     let modelObjects = [
         

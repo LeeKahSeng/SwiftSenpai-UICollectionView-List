@@ -8,11 +8,6 @@
 import UIKit
 
 class NameListViewController: UIViewController {
-
-    // Define collection view section
-    enum Section {
-        case main
-    }
     
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, SFSymbolItem>!

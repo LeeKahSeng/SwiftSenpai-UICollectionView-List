@@ -9,20 +9,6 @@ import UIKit
 
 class SingleSecExpandableListViewController: UIViewController {
 
-    enum Section {
-        case main
-    }
-    
-    enum ListItem: Hashable {
-        case header(HeaderItem)
-        case symbol(SFSymbolItem)
-    }
-    
-    struct HeaderItem: Hashable {
-        let title: String
-        let symbols: [SFSymbolItem]
-    }
-    
     let modelObjects = [
         
         HeaderItem(title: "Communication", symbols: [
