@@ -7,23 +7,7 @@
 
 import UIKit
 
-// Define the collection view data identifier type
-struct SFSymbolItem: Hashable {
-    let name: String
-    let image: UIImage
-    
-    init(name: String) {
-        self.name = name
-        self.image = UIImage(systemName: name)!
-    }
-}
-
 class BasicListViewController: UIViewController {
-    
-    // Define collection view section
-    enum Section {
-        case main
-    }
     
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, SFSymbolItem>!
