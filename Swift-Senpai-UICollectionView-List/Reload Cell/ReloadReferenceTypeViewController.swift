@@ -9,7 +9,7 @@ import UIKit
 
 class ReloadReferenceTypeViewController: UIViewController {
     
-    class SuperHero: Hashable {
+    class Superhero: Hashable {
 
         var name: String
 
@@ -22,22 +22,22 @@ class ReloadReferenceTypeViewController: UIViewController {
             hasher.combine(name)
         }
 
-        static func == (lhs: ReloadReferenceTypeViewController.SuperHero, rhs: ReloadReferenceTypeViewController.SuperHero) -> Bool {
+        static func == (lhs: ReloadReferenceTypeViewController.Superhero, rhs: ReloadReferenceTypeViewController.Superhero) -> Bool {
             lhs.name == rhs.name
         }
     }
 
     var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, SuperHero>!
+    var dataSource: UICollectionViewDiffableDataSource<Section, Superhero>!
     
     let heroArray = [
-        SuperHero(name: "Spider-Man"),
-        SuperHero(name: "Superman"),
-        SuperHero(name: "Batman"),
-        SuperHero(name: "Captain America"),
-        SuperHero(name: "Thor"),
-        SuperHero(name: "Wonder Woman"),
-        SuperHero(name: "Iron Man"),
+        Superhero(name: "Spider-Man"),
+        Superhero(name: "Superman"),
+        Superhero(name: "Batman"),
+        Superhero(name: "Captain America"),
+        Superhero(name: "Thor"),
+        Superhero(name: "Wonder Woman"),
+        Superhero(name: "Iron Man"),
     ]
     
     override func viewDidLoad() {
@@ -64,7 +64,7 @@ class ReloadReferenceTypeViewController: UIViewController {
         ])
         
         // MARK: Cell registration
-        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SuperHero> { (cell, indexPath, item) in
+        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Superhero> { (cell, indexPath, item) in
             
             // Define how data should be shown using content configuration
             var content = cell.defaultContentConfiguration()
@@ -75,7 +75,7 @@ class ReloadReferenceTypeViewController: UIViewController {
         }
         
         // MARK: Setup data source
-        dataSource = UICollectionViewDiffableDataSource<Section, SuperHero>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, hero) -> UICollectionViewCell? in
+        dataSource = UICollectionViewDiffableDataSource<Section, Superhero>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, hero) -> UICollectionViewCell? in
             
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration,
                                                                     for: indexPath,
@@ -85,7 +85,7 @@ class ReloadReferenceTypeViewController: UIViewController {
         })
         
         // MARK: Data source snapshot
-        var snapshot = NSDiffableDataSourceSnapshot<Section, SuperHero>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Superhero>()
         snapshot.appendSections([.main])
         snapshot.appendItems(heroArray, toSection: .main)
         dataSource.apply(snapshot, animatingDifferences: false)
