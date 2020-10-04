@@ -92,12 +92,12 @@ extension ReloadValueTypeViewController: UICollectionViewDelegate {
 
         // Create a new copy of selectedHero & update it
         var updatedHero = selectedHero
-        updatedHero.name = updatedHero.name.appending("⭐️")
+        updatedHero.name = updatedHero.name.appending(" ★")
 
         // Create a new copy of data source snapshot for modification
         var newSnapshot = dataSource.snapshot()
 
-        // Update snapshot by inserting new hero item and delete the old one
+        // Replacing selectedHero with updatedHero
         newSnapshot.insertItems([updatedHero], beforeItem: selectedHero)
         newSnapshot.deleteItems([selectedHero])
 

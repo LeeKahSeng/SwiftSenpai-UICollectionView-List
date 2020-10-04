@@ -22,7 +22,8 @@ class ReloadReferenceTypeViewController: UIViewController {
             hasher.combine(name)
         }
 
-        static func == (lhs: ReloadReferenceTypeViewController.Superhero, rhs: ReloadReferenceTypeViewController.Superhero) -> Bool {
+        static func == (lhs: ReloadReferenceTypeViewController.Superhero,
+                        rhs: ReloadReferenceTypeViewController.Superhero) -> Bool {
             lhs.name == rhs.name
         }
     }
@@ -105,7 +106,7 @@ extension ReloadReferenceTypeViewController: UICollectionViewDelegate {
         }
         
         // Update selectedHero
-        selectedHero.name = selectedHero.name.appending("⭐️")
+        selectedHero.name = selectedHero.name.appending(" ★")
 
         // Create a new copy of data source snapshot for modification
         var newSnapshot = dataSource.snapshot()
