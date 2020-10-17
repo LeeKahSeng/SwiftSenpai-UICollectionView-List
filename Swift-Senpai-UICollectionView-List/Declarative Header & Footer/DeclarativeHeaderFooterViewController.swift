@@ -1,5 +1,5 @@
 //
-//  DefaultHeaderFooterViewController.swift
+//  DeclarativeHeaderFooterViewController.swift
 //  Swift-Senpai-UICollectionView-List
 //
 //  Created by Lee Kah Seng on 17/10/2020.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-class DefaultHeaderFooterViewController: UIViewController {
+class DeclarativeHeaderFooterViewController: UIViewController {
 
     let modelObjects = [
         
-        HeaderItem(title: "Communication", symbols: [
-            SFSymbolItem(name: "mic"),
-            SFSymbolItem(name: "message"),
-            SFSymbolItem(name: "message.fill"),
+        HeaderItem(title: "Devices", symbols: [
+            SFSymbolItem(name: "iphone.homebutton"),
+            SFSymbolItem(name: "pc"),
+            SFSymbolItem(name: "headphones"),
         ]),
         
         HeaderItem(title: "Weather", symbols: [
@@ -66,6 +66,17 @@ class DefaultHeaderFooterViewController: UIViewController {
             cell.contentConfiguration = configuration
         }
         
+        // MARK: Initialize data source
+        dataSource = UICollectionViewDiffableDataSource<HeaderItem, SFSymbolItem>(collectionView: collectionView) {
+            (collectionView, indexPath, symbolItem) -> UICollectionViewCell? in
+            
+            // Dequeue symbol cell
+            let cell = collectionView.dequeueConfiguredReusableCell(using: symbolCellRegistration,
+                                                                    for: indexPath,
+                                                                    item: symbolItem)
+            return cell
+        }
+        
         // MARK: Supplementary view registration
         let headerRegistration = UICollectionView.SupplementaryRegistration
         <UICollectionViewListCell>(elementKind: UICollectionView.elementKindSectionHeader) {
@@ -94,18 +105,7 @@ class DefaultHeaderFooterViewController: UIViewController {
             footerView.contentConfiguration = configuration
         }
         
-        // MARK: Initialize data source
-        dataSource = UICollectionViewDiffableDataSource<HeaderItem, SFSymbolItem>(collectionView: collectionView) {
-            (collectionView, indexPath, symbolItem) -> UICollectionViewCell? in
-            
-            // Dequeue symbol cell
-            let cell = collectionView.dequeueConfiguredReusableCell(using: symbolCellRegistration,
-                                                                    for: indexPath,
-                                                                    item: symbolItem)
-            return cell
-        }
-        
-        // Define supplementaryViewProvider
+        // MARK: Define supplementary view provider
         dataSource.supplementaryViewProvider = { [unowned self]
             (collectionView, elementKind, indexPath) -> UICollectionReusableView? in
             
