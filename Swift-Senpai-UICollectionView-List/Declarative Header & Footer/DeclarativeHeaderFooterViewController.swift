@@ -35,13 +35,15 @@ class DeclarativeHeaderFooterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Declarative Header & Footer"
 
         // MARK: Create list layout
         var layoutConfig = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         layoutConfig.headerMode = .supplementary
         layoutConfig.footerMode = .supplementary
         let listLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
-        
+
         // MARK: Configure collection view
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: listLayout)
         view.addSubview(collectionView)
@@ -54,7 +56,7 @@ class DeclarativeHeaderFooterViewController: UIViewController {
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0.0),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0),
         ])
-        
+
         // MARK: Cell registration
         let symbolCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, SFSymbolItem> {
             (cell, indexPath, symbolItem) in
@@ -65,7 +67,7 @@ class DeclarativeHeaderFooterViewController: UIViewController {
             configuration.text = symbolItem.name
             cell.contentConfiguration = configuration
         }
-        
+
         // MARK: Initialize data source
         dataSource = UICollectionViewDiffableDataSource<HeaderItem, SFSymbolItem>(collectionView: collectionView) {
             (collectionView, indexPath, symbolItem) -> UICollectionViewCell? in
@@ -82,14 +84,19 @@ class DeclarativeHeaderFooterViewController: UIViewController {
         <UICollectionViewListCell>(elementKind: UICollectionView.elementKindSectionHeader) {
             [unowned self] (headerView, elementKind, indexPath) in
             
+            // Obtain header item using index path
             let headerItem = self.modelObjects[indexPath.section]
             
             // Configure header view content based on headerItem
             var configuration = headerView.defaultContentConfiguration()
             configuration.text = headerItem.title
+            
+            // Customize header appearance to make it more eye-catching
             configuration.textProperties.font = .boldSystemFont(ofSize: 16)
             configuration.textProperties.color = .systemBlue
             configuration.directionalLayoutMargins = .init(top: 20.0, leading: 0.0, bottom: 10.0, trailing: 0.0)
+            
+            // Apply the configuration to header view
             headerView.contentConfiguration = configuration
         }
         
@@ -100,6 +107,7 @@ class DeclarativeHeaderFooterViewController: UIViewController {
             let headerItem = self.modelObjects[indexPath.section]
             let symbolCount = headerItem.symbols.count
             
+            // Configure footer view content
             var configuration = footerView.defaultContentConfiguration()
             configuration.text = "Symbol count: \(symbolCount)"
             footerView.contentConfiguration = configuration
@@ -123,7 +131,7 @@ class DeclarativeHeaderFooterViewController: UIViewController {
             }
         }
         
-        // MARK: Setup snapshots
+        // MARK: Setup snapshot
         var dataSourceSnapshot = NSDiffableDataSourceSnapshot<HeaderItem, SFSymbolItem>()
 
         // Create collection view section based on number of HeaderItem in modelObjects
@@ -133,7 +141,7 @@ class DeclarativeHeaderFooterViewController: UIViewController {
         for headerItem in modelObjects {
             dataSourceSnapshot.appendItems(headerItem.symbols, toSection: headerItem)
         }
-        
+
         dataSource.apply(dataSourceSnapshot)
 
     }
