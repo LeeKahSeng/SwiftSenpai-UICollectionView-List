@@ -5,3 +5,4 @@
 - Sample project for article '[Building an Expandable List Using UICollectionView: Part 1](https://swiftsenpai.com/development/collectionview-expandable-list-part1/)'.
 - Sample project for article '[Building an Expandable List Using UICollectionView: Part 2](https://swiftsenpai.com/development/collectionview-expandable-list-part2/)'.
 - Sample project for article '[The Modern Ways to Reload Your Table and Collection View Cells](https://swiftsenpai.com/development/modern-ways-reload-cells/)'
+- Sample project for article '[Declarative UICollectionView List Header and Footer](https://swiftsenpai.com/development/declarative-list-header-footer/)'
