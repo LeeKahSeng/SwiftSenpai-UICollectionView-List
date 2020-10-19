@@ -192,6 +192,31 @@
                                             <segue destination="Lio-Md-rD1" kind="show" id="7oA-js-cD1"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="65" id="Qk2-Ow-CUd">
+                                        <rect key="frame" x="0.0" y="353" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qk2-Ow-CUd" id="qA5-gC-fBC">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Declarative Header &amp; Footer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyz-nh-520">
+                                                    <rect key="frame" x="20" y="11" width="355" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Dyz-nh-520" secondAttribute="bottom" id="3v2-Co-zbP"/>
+                                                <constraint firstItem="Dyz-nh-520" firstAttribute="leading" secondItem="qA5-gC-fBC" secondAttribute="leadingMargin" id="7Zw-St-rhe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Dyz-nh-520" secondAttribute="trailing" id="NOd-TZ-AXy"/>
+                                                <constraint firstItem="Dyz-nh-520" firstAttribute="top" secondItem="qA5-gC-fBC" secondAttribute="topMargin" id="smx-84-By5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="o93-Ym-V9T" kind="show" id="P5d-YL-GRU"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -436,7 +461,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbO-pk-nLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2287" y="3487"/>
+            <point key="canvasLocation" x="2287" y="3289"/>
+        </scene>
+        <!--Declarative Header Footer View Controller-->
+        <scene sceneID="9Kj-iW-ECV">
+            <objects>
+                <viewController id="o93-Ym-V9T" customClass="DeclarativeHeaderFooterViewController" customModule="Swift_Senpai_UICollectionView_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zSE-8p-neR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Q7A-Vf-CDc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YJp-Da-DrM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RU3-k7-ycm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="3664"/>
         </scene>
     </scenes>
     <resources>

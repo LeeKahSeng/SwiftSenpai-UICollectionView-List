@@ -24,6 +24,7 @@
 		F986E54024D5AFEE007431C2 /* SFSymbolVerticalContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986E53F24D5AFEE007431C2 /* SFSymbolVerticalContentView.swift */; };
 		F99F952124D67484004C4002 /* SFSymbolVerticalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99F952024D67484004C4002 /* SFSymbolVerticalListCell.swift */; };
 		F9A404342502535600582192 /* MultiSecExpandableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A404332502535600582192 /* MultiSecExpandableListViewController.swift */; };
+		F9D8B7EE253A8912009944FE /* DeclarativeHeaderFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D8B7ED253A8912009944FE /* DeclarativeHeaderFooterViewController.swift */; };
 		F9E5E99A24EAC0C900D59C15 /* SFSymbolNameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99924EAC0C900D59C15 /* SFSymbolNameListCell.swift */; };
 		F9E5E99C24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99B24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift */; };
 		F9E5E99E24EAC39000D59C15 /* NameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99D24EAC39000D59C15 /* NameListViewController.swift */; };
@@ -49,6 +50,7 @@
 		F986E53F24D5AFEE007431C2 /* SFSymbolVerticalContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolVerticalContentView.swift; sourceTree = "<group>"; };
 		F99F952024D67484004C4002 /* SFSymbolVerticalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolVerticalListCell.swift; sourceTree = "<group>"; };
 		F9A404332502535600582192 /* MultiSecExpandableListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSecExpandableListViewController.swift; sourceTree = "<group>"; };
+		F9D8B7ED253A8912009944FE /* DeclarativeHeaderFooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarativeHeaderFooterViewController.swift; sourceTree = "<group>"; };
 		F9E5E99924EAC0C900D59C15 /* SFSymbolNameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameListCell.swift; sourceTree = "<group>"; };
 		F9E5E99B24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameContentConfiguration.swift; sourceTree = "<group>"; };
 		F9E5E99D24EAC39000D59C15 /* NameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		F940B00D24C3E259000E6D17 /* Swift-Senpai-UICollectionView-List */ = {
 			isa = PBXGroup;
 			children = (
+				F9D8B7EA253A7103009944FE /* Declarative Header & Footer */,
 				F96AFF422524C98800F24248 /* Reload Cell */,
 				F94C4FCE24F69E6500BF6544 /* Expandable List */,
 				F9E5E99824EAC05600D59C15 /* Basic List */,
@@ -139,6 +142,14 @@
 				F986E53F24D5AFEE007431C2 /* SFSymbolVerticalContentView.swift */,
 			);
 			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		F9D8B7EA253A7103009944FE /* Declarative Header & Footer */ = {
+			isa = PBXGroup;
+			children = (
+				F9D8B7ED253A8912009944FE /* DeclarativeHeaderFooterViewController.swift */,
+			);
+			path = "Declarative Header & Footer";
 			sourceTree = "<group>";
 		};
 		F9E5E99824EAC05600D59C15 /* Basic List */ = {
@@ -224,6 +235,7 @@
 				F9E5E99A24EAC0C900D59C15 /* SFSymbolNameListCell.swift in Sources */,
 				F97AD794250393C1006B9692 /* SingleSecExpandableListViewController.swift in Sources */,
 				F9E5E99E24EAC39000D59C15 /* NameListViewController.swift in Sources */,
+				F9D8B7EE253A8912009944FE /* DeclarativeHeaderFooterViewController.swift in Sources */,
 				F99F952124D67484004C4002 /* SFSymbolVerticalListCell.swift in Sources */,
 				F940B01324C3E259000E6D17 /* BasicListViewController.swift in Sources */,
 				F93EA01024E941EE007206EB /* SFSymbolNameContentView.swift in Sources */,
