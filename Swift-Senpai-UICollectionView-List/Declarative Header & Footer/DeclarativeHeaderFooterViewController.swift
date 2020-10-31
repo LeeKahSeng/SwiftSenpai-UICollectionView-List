@@ -85,7 +85,7 @@ class DeclarativeHeaderFooterViewController: UIViewController {
             [unowned self] (headerView, elementKind, indexPath) in
             
             // Obtain header item using index path
-            let headerItem = self.modelObjects[indexPath.section]
+            let headerItem = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
             
             // Configure header view content based on headerItem
             var configuration = headerView.defaultContentConfiguration()
@@ -104,7 +104,7 @@ class DeclarativeHeaderFooterViewController: UIViewController {
         <UICollectionViewListCell>(elementKind: UICollectionView.elementKindSectionHeader) {
             [unowned self] (footerView, elementKind, indexPath) in
             
-            let headerItem = self.modelObjects[indexPath.section]
+            let headerItem = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
             let symbolCount = headerItem.symbols.count
             
             // Configure footer view content
