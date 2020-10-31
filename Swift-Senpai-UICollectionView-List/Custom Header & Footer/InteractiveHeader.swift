@@ -48,7 +48,8 @@ extension InteractiveHeader {
 
         // Set button image
         let largeConfig = UIImage.SymbolConfiguration(scale: .large)
-        infoButton.setImage(UIImage(systemName: "info.circle.fill", withConfiguration: largeConfig), for: .normal)
+        let infoImage = UIImage(systemName: "info.circle.fill", withConfiguration: largeConfig)?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
+        infoButton.setImage(infoImage, for: .normal)
         
         // Set button action
         infoButton.addAction(UIAction(handler: { [unowned self] (_) in
