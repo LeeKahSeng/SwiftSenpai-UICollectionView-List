@@ -35,11 +35,20 @@ extension InteractiveHeader {
         stackView.distribution = .fill
         addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
+         
+        // Adjust top anchor constant & priority
+        let topAnchor = stackView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor, constant: 15)
+        topAnchor.priority = UILayoutPriority(999)
+        
+        // Adjust bottom anchor constant & priority
+        let bottomAnchor = stackView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor, constant: -10)
+        bottomAnchor.priority = UILayoutPriority(999)
+    
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor),
-            stackView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
+            topAnchor,
+            bottomAnchor,
         ])
 
         // Setup label and add to stack view
