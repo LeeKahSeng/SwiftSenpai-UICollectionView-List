@@ -87,7 +87,7 @@ class CustomHeaderFooterViewController: UIViewController {
             let headerItem = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
             
             headerView.titleLabel.text = headerItem.title
-            headerView.buttonDidTappedCallback = { [unowned self] (button) in
+            headerView.infoButtonDidTappedCallback = { [unowned self] in
 
                 // Show an alert when user tap on infoButton
                 let symbolCount = headerItem.symbols.count

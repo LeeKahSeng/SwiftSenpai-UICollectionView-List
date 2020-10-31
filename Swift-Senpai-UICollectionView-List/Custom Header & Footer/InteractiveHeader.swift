@@ -10,9 +10,9 @@ import UIKit
 class InteractiveHeader: UICollectionReusableView {
     
     let titleLabel = UILabel()
-    let infoButton = UIButton(type: .infoLight)
+    let infoButton = UIButton()
     
-    var buttonDidTappedCallback: ((UIButton) -> Void)?
+    var infoButtonDidTappedCallback: (() -> Void)?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,76 +26,38 @@ class InteractiveHeader: UICollectionReusableView {
 }
 
 extension InteractiveHeader {
+    
     func configure() {
         
-        let stackView1 = UIStackView()
-        stackView1.axis = .horizontal
-        stackView1.alignment = .fill
-        stackView1.distribution = .fill
-        stackView1.spacing = 20
-        addSubview(stackView1)
-        stackView1.translatesAutoresizingMaskIntoConstraints = false
+        // Add a stack view to section container
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        addSubview(stackView)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stackView1.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
-            stackView1.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor),
-            stackView1.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
-            stackView1.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
+            stackView.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor),
+            stackView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor),
+            stackView.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor),
         ])
 
+        // Setup label and add to stack view
         titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        stackView1.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(titleLabel)
 
-
-        infoButton.addAction(UIAction(handler: { [unowned self] (action) in
-            let button = action.sender as! UIButton
-            self.buttonDidTappedCallback?(button)
+        // Set button image
+        let largeConfig = UIImage.SymbolConfiguration(scale: .large)
+        infoButton.setImage(UIImage(systemName: "info.circle.fill", withConfiguration: largeConfig), for: .normal)
+        
+        // Set button action
+        infoButton.addAction(UIAction(handler: { [unowned self] (_) in
+            // Trigger callback when button tapped
+            self.infoButtonDidTappedCallback?()
         }), for: .touchUpInside)
         
-        stackView1.addArrangedSubview(infoButton)
-        
-        
-//        let stackView2 = UIStackView()
-//        stackView2.axis = .horizontal
-//        stackView2.alignment = .fill
-//        stackView2.distribution = .fillEqually
-//        stackView2.spacing = 10
-//
-//        button1.backgroundColor = .systemRed
-//        button1.layer.cornerRadius = 5
-//
-//        button1.addAction(UIAction(handler: { [unowned self] (action) in
-//            let button = action.sender as! UIButton
-//            self.buttonDidTappedCallback?(button)
-//        }), for: .touchUpInside)
-//
-//
-//
-//        stackView2.addArrangedSubview(button1)
-//
-//        button2.backgroundColor = .systemGreen
-//        button2.layer.cornerRadius = 5
-//        stackView2.addArrangedSubview(button2)
-//
-//        button3.backgroundColor = .systemBlue
-//        button3.layer.cornerRadius = 5
-//        stackView2.addArrangedSubview(button3)
-//
-//
-//        stackView1.addArrangedSubview(stackView2)
-        
-        
-        
-//        let config = SFSymbolNameContentConfiguration(name: "LKS")
-//        let containerView = SFSymbolNameContentView(configuration: config)
-//
-//        addSubview(containerView)
-//        containerView.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0.0),
-//            containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0.0),
-//            containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0.0),
-//            containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0.0),
-//        ])
+        // Add button to stack view
+        stackView.addArrangedSubview(infoButton)
         
     }
 }
