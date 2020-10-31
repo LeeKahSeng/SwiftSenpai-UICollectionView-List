@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F92DF904254AFC5A001AEBA7 /* InteractiveHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DF902254AFC5A001AEBA7 /* InteractiveHeader.swift */; };
 		F93EA01024E941EE007206EB /* SFSymbolNameContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */; };
 		F93EA01224E941F5007206EB /* SFSymbolNameContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93EA01124E941F5007206EB /* SFSymbolNameContentView.xib */; };
 		F940B00F24C3E259000E6D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F940B00E24C3E259000E6D17 /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F92DF902254AFC5A001AEBA7 /* InteractiveHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveHeader.swift; sourceTree = "<group>"; };
 		F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameContentView.swift; sourceTree = "<group>"; };
 		F93EA01124E941F5007206EB /* SFSymbolNameContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SFSymbolNameContentView.xib; sourceTree = "<group>"; };
 		F940B00B24C3E259000E6D17 /* Swift-Senpai-UICollectionView-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-Senpai-UICollectionView-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				F9FA37BB25486DB900421758 /* CustomHeaderFooterViewController.swift */,
+				F92DF902254AFC5A001AEBA7 /* InteractiveHeader.swift */,
 			);
 			path = "Custom Header & Footer";
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				F986E53C24D5AC8F007431C2 /* CustomCellListViewController.swift in Sources */,
 				F9E5E99A24EAC0C900D59C15 /* SFSymbolNameListCell.swift in Sources */,
 				F97AD794250393C1006B9692 /* SingleSecExpandableListViewController.swift in Sources */,
+				F92DF904254AFC5A001AEBA7 /* InteractiveHeader.swift in Sources */,
 				F9E5E99E24EAC39000D59C15 /* NameListViewController.swift in Sources */,
 				F9D8B7EE253A8912009944FE /* DeclarativeHeaderFooterViewController.swift in Sources */,
 				F9FA37BC25486DB900421758 /* CustomHeaderFooterViewController.swift in Sources */,
