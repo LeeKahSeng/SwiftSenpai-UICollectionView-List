@@ -217,6 +217,31 @@
                                             <segue destination="o93-Ym-V9T" kind="show" id="P5d-YL-GRU"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="65" id="lCl-cd-hZP">
+                                        <rect key="frame" x="0.0" y="418" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lCl-cd-hZP" id="FxC-xs-dXR">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Header &amp; Footer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie7-ac-DhV">
+                                                    <rect key="frame" x="20" y="11" width="355" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ie7-ac-DhV" secondAttribute="trailing" id="21f-Kz-dKu"/>
+                                                <constraint firstItem="ie7-ac-DhV" firstAttribute="leading" secondItem="FxC-xs-dXR" secondAttribute="leadingMargin" id="4Kc-eZ-qhZ"/>
+                                                <constraint firstItem="ie7-ac-DhV" firstAttribute="top" secondItem="FxC-xs-dXR" secondAttribute="topMargin" id="QKA-3H-JoT"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ie7-ac-DhV" secondAttribute="bottom" id="fQ3-Ad-M50"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Nuu-Pz-rfi" kind="show" id="eiN-ek-Gfl"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -230,6 +255,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJf-L1-5ow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-752.17391304347836" y="109.82142857142857"/>
+        </scene>
+        <!--Custom Header Footer View Controller-->
+        <scene sceneID="Jr6-MF-6oY">
+            <objects>
+                <viewController id="Nuu-Pz-rfi" customClass="CustomHeaderFooterViewController" customModule="Swift_Senpai_UICollectionView_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tAo-ph-76O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3nw-Hu-GY2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jbh-W9-YP4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCm-8O-myh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1662" y="1848"/>
         </scene>
         <!--Name List View Controller-->
         <scene sceneID="hZB-pl-Pm4">
@@ -477,7 +518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RU3-k7-ycm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="187" y="3664"/>
+            <point key="canvasLocation" x="-1662" y="1118"/>
         </scene>
     </scenes>
     <resources>
