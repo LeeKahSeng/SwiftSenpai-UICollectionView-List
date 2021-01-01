@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRP-Mx-HEz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRP-Mx-HEz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -240,6 +240,31 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="Nuu-Pz-rfi" kind="show" id="eiN-ek-Gfl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="65" id="g72-z8-VJo">
+                                        <rect key="frame" x="0.0" y="483" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g72-z8-VJo" id="njx-iy-Ygm">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Picker Replica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lms-VV-zCd">
+                                                    <rect key="frame" x="20" y="11" width="355" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lms-VV-zCd" firstAttribute="top" secondItem="njx-iy-Ygm" secondAttribute="topMargin" id="5FU-wB-8wp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lms-VV-zCd" secondAttribute="bottom" id="c8C-wy-RmA"/>
+                                                <constraint firstItem="lms-VV-zCd" firstAttribute="leading" secondItem="njx-iy-Ygm" secondAttribute="leadingMargin" id="qzm-n4-tOX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lms-VV-zCd" secondAttribute="trailing" id="rYL-2a-3RR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="B7q-GH-gUn" kind="show" id="nYB-Fp-U5J"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -519,6 +544,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RU3-k7-ycm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1662" y="1118"/>
+        </scene>
+        <!--Date Picker Replica View Controller-->
+        <scene sceneID="EBC-FB-m64">
+            <objects>
+                <viewController id="B7q-GH-gUn" customClass="DatePickerReplicaViewController" customModule="Swift_Senpai_UICollectionView_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="854-SX-xMh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CHL-g6-afD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YJK-M2-2Dc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQY-U6-snb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1662" y="2591"/>
         </scene>
     </scenes>
     <resources>
