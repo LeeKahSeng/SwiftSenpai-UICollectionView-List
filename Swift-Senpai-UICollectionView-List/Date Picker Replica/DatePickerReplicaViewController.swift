@@ -59,10 +59,8 @@ class DatePickerReplicaViewController: UIViewController {
         
         let pickerCellRegistration = UICollectionView.CellRegistration<DatePickerCell, DatePickerItem> { (cell, indexPath, item) in
             
-            // Set date to date picker cell
-            if case let DatePickerItem.picker(date) = item {
-                cell.date = date
-            }
+            // Set `DatePickerItem` to date picker cell
+            cell.item = item
         }
         
         // Define data source
@@ -97,7 +95,7 @@ class DatePickerReplicaViewController: UIViewController {
         // Create a section snapshot
         var sectionSnapshot = NSDiffableDataSourceSectionSnapshot<DatePickerItem>()
         
-        // Show current date in date picker
+        // We will show current date in date picker & header cell
         let now = Date()
         
         // Define header and set it as parent

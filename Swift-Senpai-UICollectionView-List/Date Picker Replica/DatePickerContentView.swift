@@ -69,6 +69,8 @@ private extension DatePickerContentView {
         currentConfiguration = configuration
         
         // Set date picker's date
-        datePicker.date = configuration.date!
+        if case let DatePickerItem.picker(date) = configuration.item! {
+            datePicker.date = date
+        }
     }
 }

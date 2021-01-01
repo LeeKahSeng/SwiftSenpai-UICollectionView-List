@@ -10,7 +10,7 @@ import UIKit
 
 class DatePickerCell: UICollectionViewListCell {
     
-    var date: Date?
+    var item: DatePickerItem?
     
     override func updateConfiguration(using state: UICellConfigurationState) {
         
@@ -18,7 +18,7 @@ class DatePickerCell: UICollectionViewListCell {
         var newConfiguration = DatePickerContentConfiguration().updated(for: state)
         
         // Update any configuration parameters related to data item
-        newConfiguration.date = date
+        newConfiguration.item = item
 
         // Set content configuration in order to update custom content view
         contentConfiguration = newConfiguration
