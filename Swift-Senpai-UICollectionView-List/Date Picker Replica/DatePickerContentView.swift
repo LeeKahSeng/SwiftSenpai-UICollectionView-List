@@ -8,9 +8,13 @@
 import Foundation
 import UIKit
 
+typealias DateChangedCallback =  ((Date) -> Void)
+
 class DatePickerContentView: UIView, UIContentView {
 
-    let datePicker = UIDatePicker()
+    private let datePicker = UIDatePicker()
+    private var pickerDateChanged: DateChangedCallback?
+    
     private var currentConfiguration: DatePickerContentConfiguration!
     var configuration: UIContentConfiguration {
         get {
@@ -68,9 +72,12 @@ private extension DatePickerContentView {
         // Replace current configuration with new configuration
         currentConfiguration = configuration
         
-        // Set date picker's date
-        if case let DatePickerItem.picker(date) = configuration.item! {
+        if case let DatePickerItem.picker(date, action) = configuration.item! {
+            // Set date picker's date
             datePicker.date = date
+            
+            // Set date picker action (value changed)
+            datePicker.addAction(action, for: .valueChanged)
         }
     }
 }
