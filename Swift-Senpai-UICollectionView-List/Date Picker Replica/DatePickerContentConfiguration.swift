@@ -13,7 +13,7 @@ struct DatePickerContentConfiguration: UIContentConfiguration, Hashable {
     var item: DatePickerItem?
     
     func makeContentView() -> UIView & UIContentView {
-        // Initialize an instance of SFSymbolNameContentView
+        // Initialize an instance of DatePickerContentView
         return DatePickerContentView(configuration: self)
     }
     
