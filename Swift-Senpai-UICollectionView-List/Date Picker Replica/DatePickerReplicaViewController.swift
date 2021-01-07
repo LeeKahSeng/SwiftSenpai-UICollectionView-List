@@ -47,6 +47,7 @@ class DatePickerReplicaViewController: UIViewController {
         let headerCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, DatePickerItem> { [unowned self]
             (cell, indexPath, item) in
             
+            // Extract date from DatePickerItem
             if case let DatePickerItem.header(date) = item {
                 
                 // Show date on cell
@@ -108,9 +109,13 @@ class DatePickerReplicaViewController: UIViewController {
         
         // Define picker and set it as child of `header`
         let action = UIAction(handler: { [unowned self] (action) in
+            
+            // Make sure sender is a date picker
             guard let picker = action.sender as? UIDatePicker else {
                 return
             }
+            
+            // Reload header cell with date picker's date
             reloadHeader(with: picker.date)
         })
         let picker = DatePickerItem.picker(now, action)

@@ -13,7 +13,6 @@ typealias DateChangedCallback =  ((Date) -> Void)
 class DatePickerContentView: UIView, UIContentView {
 
     private let datePicker = UIDatePicker()
-    private var pickerDateChanged: DateChangedCallback?
     
     private var currentConfiguration: DatePickerContentConfiguration!
     var configuration: UIContentConfiguration {
