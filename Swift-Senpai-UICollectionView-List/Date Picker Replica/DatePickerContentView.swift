@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-typealias DateChangedCallback =  ((Date) -> Void)
-
 class DatePickerContentView: UIView, UIContentView {
 
     private let datePicker = UIDatePicker()
