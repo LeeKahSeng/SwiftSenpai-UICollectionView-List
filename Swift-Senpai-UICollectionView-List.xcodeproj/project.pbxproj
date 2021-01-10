@@ -29,6 +29,10 @@
 		F9E5E99A24EAC0C900D59C15 /* SFSymbolNameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99924EAC0C900D59C15 /* SFSymbolNameListCell.swift */; };
 		F9E5E99C24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99B24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift */; };
 		F9E5E99E24EAC39000D59C15 /* NameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E5E99D24EAC39000D59C15 /* NameListViewController.swift */; };
+		F9F4F5AE259F503E00FB236B /* DatePickerReplicaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F4F5AD259F503E00FB236B /* DatePickerReplicaViewController.swift */; };
+		F9F4F5B2259F515000FB236B /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F4F5B1259F515000FB236B /* DatePickerCell.swift */; };
+		F9F4F5B5259F515D00FB236B /* DatePickerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F4F5B4259F515D00FB236B /* DatePickerContentView.swift */; };
+		F9F4F5B8259F517C00FB236B /* DatePickerContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F4F5B7259F517C00FB236B /* DatePickerContentConfiguration.swift */; };
 		F9FA37BC25486DB900421758 /* CustomHeaderFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FA37BB25486DB900421758 /* CustomHeaderFooterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +61,10 @@
 		F9E5E99924EAC0C900D59C15 /* SFSymbolNameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameListCell.swift; sourceTree = "<group>"; };
 		F9E5E99B24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameContentConfiguration.swift; sourceTree = "<group>"; };
 		F9E5E99D24EAC39000D59C15 /* NameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameListViewController.swift; sourceTree = "<group>"; };
+		F9F4F5AD259F503E00FB236B /* DatePickerReplicaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerReplicaViewController.swift; sourceTree = "<group>"; };
+		F9F4F5B1259F515000FB236B /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
+		F9F4F5B4259F515D00FB236B /* DatePickerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerContentView.swift; sourceTree = "<group>"; };
+		F9F4F5B7259F517C00FB236B /* DatePickerContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerContentConfiguration.swift; sourceTree = "<group>"; };
 		F9FA37BB25486DB900421758 /* CustomHeaderFooterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderFooterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +98,7 @@
 		F940B00D24C3E259000E6D17 /* Swift-Senpai-UICollectionView-List */ = {
 			isa = PBXGroup;
 			children = (
+				F9F4F5AC259F4FE100FB236B /* Date Picker Replica */,
 				F9FA37BA25486D6900421758 /* Custom Header & Footer */,
 				F9D8B7EA253A7103009944FE /* Declarative Header & Footer */,
 				F96AFF422524C98800F24248 /* Reload Cell */,
@@ -163,6 +172,17 @@
 				F940B01224C3E259000E6D17 /* BasicListViewController.swift */,
 			);
 			path = "Basic List";
+			sourceTree = "<group>";
+		};
+		F9F4F5AC259F4FE100FB236B /* Date Picker Replica */ = {
+			isa = PBXGroup;
+			children = (
+				F9F4F5AD259F503E00FB236B /* DatePickerReplicaViewController.swift */,
+				F9F4F5B7259F517C00FB236B /* DatePickerContentConfiguration.swift */,
+				F9F4F5B1259F515000FB236B /* DatePickerCell.swift */,
+				F9F4F5B4259F515D00FB236B /* DatePickerContentView.swift */,
+			);
+			path = "Date Picker Replica";
 			sourceTree = "<group>";
 		};
 		F9FA37BA25486D6900421758 /* Custom Header & Footer */ = {
@@ -247,15 +267,18 @@
 			files = (
 				F986E53C24D5AC8F007431C2 /* CustomCellListViewController.swift in Sources */,
 				F9E5E99A24EAC0C900D59C15 /* SFSymbolNameListCell.swift in Sources */,
+				F9F4F5B5259F515D00FB236B /* DatePickerContentView.swift in Sources */,
 				F97AD794250393C1006B9692 /* SingleSecExpandableListViewController.swift in Sources */,
 				F92DF904254AFC5A001AEBA7 /* InteractiveHeader.swift in Sources */,
 				F9E5E99E24EAC39000D59C15 /* NameListViewController.swift in Sources */,
 				F9D8B7EE253A8912009944FE /* DeclarativeHeaderFooterViewController.swift in Sources */,
 				F9FA37BC25486DB900421758 /* CustomHeaderFooterViewController.swift in Sources */,
+				F9F4F5AE259F503E00FB236B /* DatePickerReplicaViewController.swift in Sources */,
 				F99F952124D67484004C4002 /* SFSymbolVerticalListCell.swift in Sources */,
 				F940B01324C3E259000E6D17 /* BasicListViewController.swift in Sources */,
 				F93EA01024E941EE007206EB /* SFSymbolNameContentView.swift in Sources */,
 				F9660949251A460D00C2DB98 /* Model.swift in Sources */,
+				F9F4F5B8259F517C00FB236B /* DatePickerContentConfiguration.swift in Sources */,
 				F940B00F24C3E259000E6D17 /* AppDelegate.swift in Sources */,
 				F9E5E99C24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift in Sources */,
 				F940B01124C3E259000E6D17 /* SceneDelegate.swift in Sources */,
@@ -264,6 +287,7 @@
 				F986E53E24D5AE3B007431C2 /* SFSymbolContentConfiguration.swift in Sources */,
 				F9A404342502535600582192 /* MultiSecExpandableListViewController.swift in Sources */,
 				F96AFF452524CC6D00F24248 /* ReloadReferenceTypeViewController.swift in Sources */,
+				F9F4F5B2259F515000FB236B /* DatePickerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
