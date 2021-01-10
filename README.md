@@ -7,3 +7,4 @@
 - Sample project for article '[The Modern Ways to Reload Your Table and Collection View Cells](https://swiftsenpai.com/development/modern-ways-reload-cells/)'
 - Sample project for article '[Declarative UICollectionView List Header and Footer](https://swiftsenpai.com/development/declarative-list-header-footer/)'
 - Sample project for article '[UICollectionView List with Interactive Custom Header](https://swiftsenpai.com/development/list-interactive-custom-header/)'
+- Sample project for article '[Replicate the Expandable Date Picker Using UICollectionView List](https://swiftsenpai.com/development/expandable-date-picker-list/)'
