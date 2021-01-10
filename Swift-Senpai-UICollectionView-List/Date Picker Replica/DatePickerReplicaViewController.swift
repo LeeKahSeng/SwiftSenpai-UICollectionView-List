@@ -152,7 +152,8 @@ private extension DatePickerReplicaViewController {
 
         // Replace the header item (by insert new item and then delete old item)
         newSectionSnapshot.insert([newHeaderItem], before: oldHeaderItem)
-        // ⭐️ Note: Must perform delete before append `datePickerItem` to avoid 'NSInternalInconsistencyException' with reason: 'Supplied identifiers are not unique.'
+        
+        // Important: Delete `oldHeaderItem` must come before append `datePickerItem` to avoid 'NSInternalInconsistencyException' with reason: 'Supplied identifiers are not unique.'
         newSectionSnapshot.delete([oldHeaderItem])
         
         // Reconstruct section snapshot by appending `datePickerItem` to `newHeaderItem`
