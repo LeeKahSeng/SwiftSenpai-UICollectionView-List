@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F92A29AA25B86A8E00270D04 /* NormalHeaderReloadValViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A29A925B86A8E00270D04 /* NormalHeaderReloadValViewController.swift */; };
+		F92A29AD25B86AA100270D04 /* ExpandHeaderReloadValViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A29AC25B86AA100270D04 /* ExpandHeaderReloadValViewController.swift */; };
 		F92DF904254AFC5A001AEBA7 /* InteractiveHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DF902254AFC5A001AEBA7 /* InteractiveHeader.swift */; };
 		F93EA01024E941EE007206EB /* SFSymbolNameContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */; };
 		F93EA01224E941F5007206EB /* SFSymbolNameContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93EA01124E941F5007206EB /* SFSymbolNameContentView.xib */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F92A29A925B86A8E00270D04 /* NormalHeaderReloadValViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalHeaderReloadValViewController.swift; sourceTree = "<group>"; };
+		F92A29AC25B86AA100270D04 /* ExpandHeaderReloadValViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandHeaderReloadValViewController.swift; sourceTree = "<group>"; };
 		F92DF902254AFC5A001AEBA7 /* InteractiveHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveHeader.swift; sourceTree = "<group>"; };
 		F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameContentView.swift; sourceTree = "<group>"; };
 		F93EA01124E941F5007206EB /* SFSymbolNameContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SFSymbolNameContentView.xib; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 		F946A20025B425F30053E194 /* Value Type */ = {
 			isa = PBXGroup;
 			children = (
+				F92A29A925B86A8E00270D04 /* NormalHeaderReloadValViewController.swift */,
+				F92A29AC25B86AA100270D04 /* ExpandHeaderReloadValViewController.swift */,
 			);
 			path = "Value Type";
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F986E53C24D5AC8F007431C2 /* CustomCellListViewController.swift in Sources */,
+				F92A29AD25B86AA100270D04 /* ExpandHeaderReloadValViewController.swift in Sources */,
 				F946A20625B4268F0053E194 /* ExpandHeaderReloadRefViewController.swift in Sources */,
 				F9E5E99A24EAC0C900D59C15 /* SFSymbolNameListCell.swift in Sources */,
 				F9F4F5B5259F515D00FB236B /* DatePickerContentView.swift in Sources */,
@@ -312,6 +319,7 @@
 				F9660949251A460D00C2DB98 /* Model.swift in Sources */,
 				F9F4F5B8259F517C00FB236B /* DatePickerContentConfiguration.swift in Sources */,
 				F940B00F24C3E259000E6D17 /* AppDelegate.swift in Sources */,
+				F92A29AA25B86A8E00270D04 /* NormalHeaderReloadValViewController.swift in Sources */,
 				F9E5E99C24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift in Sources */,
 				F940B01124C3E259000E6D17 /* SceneDelegate.swift in Sources */,
 				F96AFF482524CE3D00F24248 /* ReloadValueTypeViewController.swift in Sources */,

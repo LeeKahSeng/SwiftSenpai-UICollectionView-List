@@ -654,7 +654,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reload Value Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bS-aC-8qI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reload Value Type (Normal Header)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bS-aC-8qI">
                                                     <rect key="frame" x="20" y="11" width="355" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -668,6 +668,34 @@
                                                 <constraint firstItem="9bS-aC-8qI" firstAttribute="leading" secondItem="AfZ-JT-aEX" secondAttribute="leadingMargin" id="v0y-qe-XQ4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="cAt-Si-BOR" kind="show" id="0Tu-Np-cJ6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="65" id="T4n-4q-VdJ">
+                                        <rect key="frame" x="0.0" y="223" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T4n-4q-VdJ" id="qOc-JD-hES">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reload Value Type (Expandable Header)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9o-1o-Etc">
+                                                    <rect key="frame" x="20" y="11" width="355" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="q9o-1o-Etc" firstAttribute="leading" secondItem="qOc-JD-hES" secondAttribute="leadingMargin" id="Tvx-XY-ihi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="q9o-1o-Etc" secondAttribute="trailing" id="UBW-RL-Mbi"/>
+                                                <constraint firstItem="q9o-1o-Etc" firstAttribute="top" secondItem="qOc-JD-hES" secondAttribute="topMargin" id="h6L-X2-bNF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="q9o-1o-Etc" secondAttribute="bottom" id="hkB-Sv-4rT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="uHw-Nb-Dc8" kind="show" id="Olg-xu-wZe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -699,6 +727,22 @@
             </objects>
             <point key="canvasLocation" x="1278" y="4013"/>
         </scene>
+        <!--Normal Header Reload Val View Controller-->
+        <scene sceneID="Ul6-g8-PLZ">
+            <objects>
+                <viewController id="cAt-Si-BOR" customClass="NormalHeaderReloadValViewController" customModule="Swift_Senpai_UICollectionView_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D8U-uv-4SA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Fv-ZK-ol6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GG0-vz-DDC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bRd-B6-Y7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2229" y="4013"/>
+        </scene>
         <!--Expand Header Reload Ref View Controller-->
         <scene sceneID="anu-ga-jY7">
             <objects>
@@ -714,6 +758,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVO-U2-Dv6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1277" y="4696"/>
+        </scene>
+        <!--Expand Header Reload Val View Controller-->
+        <scene sceneID="cul-YY-rQy">
+            <objects>
+                <viewController id="uHw-Nb-Dc8" customClass="ExpandHeaderReloadValViewController" customModule="Swift_Senpai_UICollectionView_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Vm-4W-kN2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Fwj-jg-hKo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mjL-Pm-fEq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19n-7h-XKj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2229" y="4696"/>
         </scene>
     </scenes>
     <resources>
