@@ -142,7 +142,7 @@ class DeclarativeHeaderFooterViewController: UIViewController {
             dataSourceSnapshot.appendItems(headerItem.symbols, toSection: headerItem)
         }
 
-        dataSource.apply(dataSourceSnapshot)
+        dataSource.apply(dataSourceSnapshot, animatingDifferences: false)
 
     }
 }
