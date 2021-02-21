@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F92A29AA25B86A8E00270D04 /* NormalHeaderReloadValViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A29A925B86A8E00270D04 /* NormalHeaderReloadValViewController.swift */; };
-		F92A29AD25B86AA100270D04 /* ExpandHeaderReloadValViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A29AC25B86AA100270D04 /* ExpandHeaderReloadValViewController.swift */; };
+		F92A29AD25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A29AC25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift */; };
 		F92DF904254AFC5A001AEBA7 /* InteractiveHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DF902254AFC5A001AEBA7 /* InteractiveHeader.swift */; };
 		F93EA01024E941EE007206EB /* SFSymbolNameContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */; };
 		F93EA01224E941F5007206EB /* SFSymbolNameContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93EA01124E941F5007206EB /* SFSymbolNameContentView.xib */; };
@@ -18,8 +17,6 @@
 		F940B01624C3E259000E6D17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F940B01424C3E259000E6D17 /* Main.storyboard */; };
 		F940B01824C3E25B000E6D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F940B01724C3E25B000E6D17 /* Assets.xcassets */; };
 		F940B01B24C3E25B000E6D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F940B01924C3E25B000E6D17 /* LaunchScreen.storyboard */; };
-		F946A20325B4267B0053E194 /* NormalHeaderReloadRefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946A20225B4267B0053E194 /* NormalHeaderReloadRefViewController.swift */; };
-		F946A20625B4268F0053E194 /* ExpandHeaderReloadRefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946A20525B4268F0053E194 /* ExpandHeaderReloadRefViewController.swift */; };
 		F9660949251A460D00C2DB98 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9660948251A460D00C2DB98 /* Model.swift */; };
 		F96AFF452524CC6D00F24248 /* ReloadReferenceTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96AFF442524CC6D00F24248 /* ReloadReferenceTypeViewController.swift */; };
 		F96AFF482524CE3D00F24248 /* ReloadValueTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96AFF472524CE3D00F24248 /* ReloadValueTypeViewController.swift */; };
@@ -41,8 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F92A29A925B86A8E00270D04 /* NormalHeaderReloadValViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalHeaderReloadValViewController.swift; sourceTree = "<group>"; };
-		F92A29AC25B86AA100270D04 /* ExpandHeaderReloadValViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandHeaderReloadValViewController.swift; sourceTree = "<group>"; };
+		F92A29AC25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadExpandableHeaderViewController.swift; sourceTree = "<group>"; };
 		F92DF902254AFC5A001AEBA7 /* InteractiveHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveHeader.swift; sourceTree = "<group>"; };
 		F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameContentView.swift; sourceTree = "<group>"; };
 		F93EA01124E941F5007206EB /* SFSymbolNameContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SFSymbolNameContentView.xib; sourceTree = "<group>"; };
@@ -54,8 +50,6 @@
 		F940B01724C3E25B000E6D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F940B01A24C3E25B000E6D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F940B01C24C3E25B000E6D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F946A20225B4267B0053E194 /* NormalHeaderReloadRefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalHeaderReloadRefViewController.swift; sourceTree = "<group>"; };
-		F946A20525B4268F0053E194 /* ExpandHeaderReloadRefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandHeaderReloadRefViewController.swift; sourceTree = "<group>"; };
 		F9660948251A460D00C2DB98 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F96AFF442524CC6D00F24248 /* ReloadReferenceTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadReferenceTypeViewController.swift; sourceTree = "<group>"; };
 		F96AFF472524CE3D00F24248 /* ReloadValueTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadValueTypeViewController.swift; sourceTree = "<group>"; };
@@ -129,28 +123,9 @@
 		F946A1FE25B425DA0053E194 /* Reload Header */ = {
 			isa = PBXGroup;
 			children = (
-				F946A1FF25B425E60053E194 /* References Type */,
-				F946A20025B425F30053E194 /* Value Type */,
+				F92A29AC25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift */,
 			);
 			path = "Reload Header";
-			sourceTree = "<group>";
-		};
-		F946A1FF25B425E60053E194 /* References Type */ = {
-			isa = PBXGroup;
-			children = (
-				F946A20225B4267B0053E194 /* NormalHeaderReloadRefViewController.swift */,
-				F946A20525B4268F0053E194 /* ExpandHeaderReloadRefViewController.swift */,
-			);
-			path = "References Type";
-			sourceTree = "<group>";
-		};
-		F946A20025B425F30053E194 /* Value Type */ = {
-			isa = PBXGroup;
-			children = (
-				F92A29A925B86A8E00270D04 /* NormalHeaderReloadValViewController.swift */,
-				F92A29AC25B86AA100270D04 /* ExpandHeaderReloadValViewController.swift */,
-			);
-			path = "Value Type";
 			sourceTree = "<group>";
 		};
 		F94C4FCE24F69E6500BF6544 /* Expandable List */ = {
@@ -302,8 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F986E53C24D5AC8F007431C2 /* CustomCellListViewController.swift in Sources */,
-				F92A29AD25B86AA100270D04 /* ExpandHeaderReloadValViewController.swift in Sources */,
-				F946A20625B4268F0053E194 /* ExpandHeaderReloadRefViewController.swift in Sources */,
+				F92A29AD25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift in Sources */,
 				F9E5E99A24EAC0C900D59C15 /* SFSymbolNameListCell.swift in Sources */,
 				F9F4F5B5259F515D00FB236B /* DatePickerContentView.swift in Sources */,
 				F97AD794250393C1006B9692 /* SingleSecExpandableListViewController.swift in Sources */,
@@ -312,14 +286,12 @@
 				F9D8B7EE253A8912009944FE /* DeclarativeHeaderFooterViewController.swift in Sources */,
 				F9FA37BC25486DB900421758 /* CustomHeaderFooterViewController.swift in Sources */,
 				F9F4F5AE259F503E00FB236B /* DatePickerReplicaViewController.swift in Sources */,
-				F946A20325B4267B0053E194 /* NormalHeaderReloadRefViewController.swift in Sources */,
 				F99F952124D67484004C4002 /* SFSymbolVerticalListCell.swift in Sources */,
 				F940B01324C3E259000E6D17 /* BasicListViewController.swift in Sources */,
 				F93EA01024E941EE007206EB /* SFSymbolNameContentView.swift in Sources */,
 				F9660949251A460D00C2DB98 /* Model.swift in Sources */,
 				F9F4F5B8259F517C00FB236B /* DatePickerContentConfiguration.swift in Sources */,
 				F940B00F24C3E259000E6D17 /* AppDelegate.swift in Sources */,
-				F92A29AA25B86A8E00270D04 /* NormalHeaderReloadValViewController.swift in Sources */,
 				F9E5E99C24EAC18700D59C15 /* SFSymbolNameContentConfiguration.swift in Sources */,
 				F940B01124C3E259000E6D17 /* SceneDelegate.swift in Sources */,
 				F96AFF482524CE3D00F24248 /* ReloadValueTypeViewController.swift in Sources */,

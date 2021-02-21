@@ -1,5 +1,5 @@
 //
-//  ExpandHeaderReloadValViewController.swift
+//  ReloadExpandableHeaderViewController.swift
 //  Swift-Senpai-UICollectionView-List
 //
 //  Created by Lee Kah Seng on 20/01/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExpandHeaderReloadValViewController: UIViewController {
+class ReloadExpandableHeaderViewController: UIViewController {
     
     // MARK: Identifier Types
     struct Parent: Hashable {
@@ -46,6 +46,8 @@ class ExpandHeaderReloadValViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Reload Expandable Section Header"
         
         // MARK: Create list layout
         var layoutConfig = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
@@ -135,7 +137,7 @@ class ExpandHeaderReloadValViewController: UIViewController {
     
 }
 
-extension ExpandHeaderReloadValViewController: UICollectionViewDelegate {
+extension ReloadExpandableHeaderViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
