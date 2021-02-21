@@ -8,3 +8,4 @@
 - Sample project for article '[Declarative UICollectionView List Header and Footer](https://swiftsenpai.com/development/declarative-list-header-footer/)'
 - Sample project for article '[UICollectionView List with Interactive Custom Header](https://swiftsenpai.com/development/list-interactive-custom-header/)'
 - Sample project for article '[Replicate the Expandable Date Picker Using UICollectionView List](https://swiftsenpai.com/development/expandable-date-picker-list/)'
+- Sample project for article '[How to Reload the Diffable Section Header](https://swiftsenpai.com/development/reload-diffable-section-header/)'
