@@ -8,8 +8,8 @@
 import UIKit
 
 class ExpandHeaderReloadValViewController: UIViewController {
-
-    // MARK: Item Identifier Types
+    
+    // MARK: Identifier Types
     struct Parent: Hashable {
         var title: String
         let children: [Child]
@@ -46,12 +46,12 @@ class ExpandHeaderReloadValViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // MARK: Create list layout
         var layoutConfig = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         layoutConfig.headerMode = .firstItemInSection
         let listLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
-
+        
         // MARK: Configure collection view
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: listLayout)
         collectionView.delegate = self
@@ -63,21 +63,24 @@ class ExpandHeaderReloadValViewController: UIViewController {
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0.0),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0),
         ])
-
+        
         // MARK: Cell registration
         let headerCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Parent> {
             (cell, indexPath, parent) in
             
-            // Set headerItem's data to cell
+            // Set parent's title to header cell
             var content = cell.defaultContentConfiguration()
             content.text = parent.title
             cell.contentConfiguration = content
+            
+            let headerDisclosureOption = UICellAccessory.OutlineDisclosureOptions(style: .header)
+            cell.accessories = [.outlineDisclosure(options:headerDisclosureOption)]
         }
-
+        
         let childCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Child> {
             (cell, indexPath, child) in
             
-            // Set symbolItem's data to cell
+            // Set child title to cell
             var content = cell.defaultContentConfiguration()
             content.text = child.title
             cell.contentConfiguration = content
@@ -89,16 +92,16 @@ class ExpandHeaderReloadValViewController: UIViewController {
             
             switch listItem {
             case .parent(let parent):
-            
+                
                 // Dequeue header cell
                 let cell = collectionView.dequeueConfiguredReusableCell(using: headerCellRegistration,
                                                                         for: indexPath,
                                                                         item: parent)
                 return cell
-            
+                
             case .child(let child):
                 
-                // Dequeue symbol cell
+                // Dequeue cell
                 let cell = collectionView.dequeueConfiguredReusableCell(using: childCellRegistration,
                                                                         for: indexPath,
                                                                         item: child)
@@ -106,17 +109,18 @@ class ExpandHeaderReloadValViewController: UIViewController {
             }
         }
         
-        // Loop through each header item so that we can create a section snapshot for each respective header item.
+        // MARK: Construct data source snapshot
+        // Loop through each parent items to create a section snapshots.
         for parent in parents {
             
             // Create a section snapshot
             var sectionSnapshot = NSDiffableDataSourceSectionSnapshot<DataItem>()
             
-            // Create a header ListItem & append as parent
+            // Create a parent DataItem & append as parent
             let parentDataItem = DataItem.parent(parent)
             sectionSnapshot.append([parentDataItem])
             
-            // Create an array of symbol ListItem & append as child of headerListItem
+            // Create an array of child items & append as children of parentDataItem
             let childDataItemArray = parent.children.map { DataItem.child($0) }
             sectionSnapshot.append(childDataItemArray, to: parentDataItem)
             
@@ -128,7 +132,7 @@ class ExpandHeaderReloadValViewController: UIViewController {
         }
         
     }
-
+    
 }
 
 extension ExpandHeaderReloadValViewController: UICollectionViewDelegate {
@@ -137,47 +141,53 @@ extension ExpandHeaderReloadValViewController: UICollectionViewDelegate {
                         didSelectItemAt indexPath: IndexPath) {
         
         let selectedSection = dataSource.snapshot().sectionIdentifiers[indexPath.section]
-        let oldSectionSnapshot = dataSource.snapshot(for: selectedSection)
+        let selectedSectionSnapshot = dataSource.snapshot(for: selectedSection)
         
-        // Obtain reference to parent of selected child within the section snaphot
+        // 1
+        // Obtain a reference to the selected parent
         guard
-            let oldParentDataItem = oldSectionSnapshot.rootItems.first,
-            case let DataItem.parent(oldParent) = oldParentDataItem else {
+            let selectedParentDataItem = selectedSectionSnapshot.rootItems.first,
+            case let DataItem.parent(selectedParent) = selectedParentDataItem else {
             return
         }
         
-        // Extract selected child from section snapshot
-        let selectedChildDataItem = oldSectionSnapshot.items[indexPath.item]
+        // 2
+        // Obtain a reference to the selected child
+        let selectedChildDataItem = selectedSectionSnapshot.items[indexPath.item]
         guard case let DataItem.child(selectedChild) = selectedChildDataItem else {
             return
         }
         
-        // Create new parent with selectedChild's title
-        let newParent = Parent(title: selectedChild.title, children: oldParent.children)
+        // 3
+        // Create a new parent with selectedChild's title
+        let newParent = Parent(title: selectedChild.title, children: selectedParent.children)
         let newParentDataItem = DataItem.parent(newParent)
         
+        // 4
         // Avoid crash when user tap on same cell twice (snapshot data must be unique)
-        guard oldParent != newParent else {
+        guard selectedParent != newParent else {
             return
         }
-
-        // Create a new copy of section snapshot for modification
-        var newSectionSnapshot = oldSectionSnapshot
         
+        // 5
         // Replace the parent in section snapshot (by insert new item and then delete old item)
-        newSectionSnapshot.insert([newParentDataItem], before: oldParentDataItem)
-        newSectionSnapshot.delete([oldParentDataItem])
+        var newSectionSnapshot = selectedSectionSnapshot
+        newSectionSnapshot.insert([newParentDataItem], before: selectedParentDataItem)
+        newSectionSnapshot.delete([selectedParentDataItem])
         
+        // 6
         // Reconstruct section snapshot by appending children to `newParentDataItem`
-        let allChildDataItems = oldParent.children.map { DataItem.child($0) }
+        let allChildDataItems = selectedParent.children.map { DataItem.child($0) }
         newSectionSnapshot.append(allChildDataItems, to: newParentDataItem)
         
+        // 7
         // Expand the section
         newSectionSnapshot.expand([newParentDataItem])
         
+        // 8
         // Apply new section snapshot to selected section
-        dataSource.apply(newSectionSnapshot, to: selectedSection, animatingDifferences: false) {
-            // The cell's select state will be gone after applying new snapshot, thus manually reselect the cell.
+        dataSource.apply(newSectionSnapshot, to: selectedSection, animatingDifferences: true) {
+            // The cell's select state will be gone after applying a new snapshot, thus manually reselecting the cell.
             collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .left)
         }
     }

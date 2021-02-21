@@ -30,7 +30,7 @@ class ExpandHeaderReloadRefViewController: UIViewController {
     }
     
     class Child: Hashable {
-        let title: String
+        var title: String
         
         init(title: String) {
             self.title = title
@@ -99,6 +99,9 @@ class ExpandHeaderReloadRefViewController: UIViewController {
             var content = cell.defaultContentConfiguration()
             content.text = parent.title
             cell.contentConfiguration = content
+            
+            let headerDisclosureOption = UICellAccessory.OutlineDisclosureOptions(style: .header)
+            cell.accessories = [.outlineDisclosure(options:headerDisclosureOption)]
         }
 
         let childCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Child> {
@@ -153,7 +156,6 @@ class ExpandHeaderReloadRefViewController: UIViewController {
             // Apply section snapshot to the respective collection view section
             dataSource.apply(sectionSnapshot, to: parent, animatingDifferences: false)
         }
-        
     }
     
 }
@@ -162,25 +164,48 @@ extension ExpandHeaderReloadRefViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-
-        var newSnapshot = dataSource.snapshot()
-        let parent = newSnapshot.sectionIdentifiers[indexPath.section]
         
-        // Extract child from `selectedDataItem`
-        let selectedDataItem = newSnapshot.itemIdentifiers(inSection: parent)[indexPath.item]
-
-        guard case let DataItem.child(selectedChild) = selectedDataItem else {
+        let selectedSection = dataSource.snapshot().sectionIdentifiers[indexPath.section]
+        let oldSectionSnapshot = dataSource.snapshot(for: selectedSection)
+        
+        // Obtain reference to parent of selected child
+        guard
+            let oldParentDataItem = oldSectionSnapshot.rootItems.first,
+            case let DataItem.parent(oldParent) = oldParentDataItem else {
+            return
+        }
+        
+        // Extract selected child from section snapshot
+        let selectedChildDataItem = oldSectionSnapshot.items[indexPath.item]
+        guard case let DataItem.child(selectedChild) = selectedChildDataItem else {
+            return
+        }
+        
+        // Create new parent with selectedChild's title
+        let newParent = Parent(title: selectedChild.title, children: oldParent.children)
+        let newParentDataItem = DataItem.parent(newParent)
+        
+        // Avoid crash when user tap on same cell twice (snapshot data must be unique)
+        guard oldParent != newParent else {
             return
         }
 
-        // Change parent's title to selected cell's title
-        parent.title = selectedChild.title
-
-        // Reload the entire section
-        newSnapshot.reloadSections([parent])
-
-        // Apply the new snapshot to data source
-        dataSource.apply(newSnapshot, animatingDifferences: false) {
+        // Create a new copy of section snapshot for modification
+        var newSectionSnapshot = oldSectionSnapshot
+        
+        // Replace the parent in section snapshot (by insert new item and then delete old item)
+        newSectionSnapshot.insert([newParentDataItem], before: oldParentDataItem)
+        newSectionSnapshot.delete([oldParentDataItem])
+        
+        // Reconstruct section snapshot by appending children to `newParentDataItem`
+        let allChildDataItems = oldParent.children.map { DataItem.child($0) }
+        newSectionSnapshot.append(allChildDataItems, to: newParentDataItem)
+        
+        // Expand the section
+        newSectionSnapshot.expand([newParentDataItem])
+        
+        // Apply new section snapshot to selected section
+        dataSource.apply(newSectionSnapshot, to: selectedSection, animatingDifferences: false) {
             // The cell's select state will be gone after applying new snapshot, thus manually reselect the cell.
             collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .left)
         }
