@@ -267,6 +267,31 @@
                                             <segue destination="B7q-GH-gUn" kind="show" id="nYB-Fp-U5J"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="65" id="j1j-bM-jvG">
+                                        <rect key="frame" x="0.0" y="548" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j1j-bM-jvG" id="U1w-Jm-my1">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reload Expandable Section Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhl-4g-iy5">
+                                                    <rect key="frame" x="20" y="11" width="355" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qhl-4g-iy5" firstAttribute="leading" secondItem="U1w-Jm-my1" secondAttribute="leadingMargin" id="M87-M9-arN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Qhl-4g-iy5" secondAttribute="bottom" id="bAQ-YN-IbK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Qhl-4g-iy5" secondAttribute="trailing" id="mmF-hY-9a7"/>
+                                                <constraint firstItem="Qhl-4g-iy5" firstAttribute="top" secondItem="U1w-Jm-my1" secondAttribute="topMargin" id="sUw-Ep-Kpn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="a9d-Ca-bgX" kind="show" id="qjC-Cl-xLb"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -421,6 +446,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JsW-qw-Y1P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="187" y="1392"/>
+        </scene>
+        <!--Reload Expandable Header View Controller-->
+        <scene sceneID="h7J-n3-ENC">
+            <objects>
+                <viewController id="a9d-Ca-bgX" customClass="ReloadExpandableHeaderViewController" customModule="Swift_Senpai_UICollectionView_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xdY-oD-gfc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="apU-e0-5Jb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KHL-Ro-iKh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMS-8U-Mfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="3482"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Esy-hx-8wj">

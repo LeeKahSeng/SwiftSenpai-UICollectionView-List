@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F92A29AD25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A29AC25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift */; };
 		F92DF904254AFC5A001AEBA7 /* InteractiveHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DF902254AFC5A001AEBA7 /* InteractiveHeader.swift */; };
 		F93EA01024E941EE007206EB /* SFSymbolNameContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */; };
 		F93EA01224E941F5007206EB /* SFSymbolNameContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93EA01124E941F5007206EB /* SFSymbolNameContentView.xib */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F92A29AC25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadExpandableHeaderViewController.swift; sourceTree = "<group>"; };
 		F92DF902254AFC5A001AEBA7 /* InteractiveHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveHeader.swift; sourceTree = "<group>"; };
 		F93EA00F24E941EE007206EB /* SFSymbolNameContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolNameContentView.swift; sourceTree = "<group>"; };
 		F93EA01124E941F5007206EB /* SFSymbolNameContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SFSymbolNameContentView.xib; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		F940B00D24C3E259000E6D17 /* Swift-Senpai-UICollectionView-List */ = {
 			isa = PBXGroup;
 			children = (
+				F946A1FE25B425DA0053E194 /* Reload Header */,
 				F9F4F5AC259F4FE100FB236B /* Date Picker Replica */,
 				F9FA37BA25486D6900421758 /* Custom Header & Footer */,
 				F9D8B7EA253A7103009944FE /* Declarative Header & Footer */,
@@ -115,6 +118,14 @@
 				F940B01C24C3E25B000E6D17 /* Info.plist */,
 			);
 			path = "Swift-Senpai-UICollectionView-List";
+			sourceTree = "<group>";
+		};
+		F946A1FE25B425DA0053E194 /* Reload Header */ = {
+			isa = PBXGroup;
+			children = (
+				F92A29AC25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift */,
+			);
+			path = "Reload Header";
 			sourceTree = "<group>";
 		};
 		F94C4FCE24F69E6500BF6544 /* Expandable List */ = {
@@ -266,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F986E53C24D5AC8F007431C2 /* CustomCellListViewController.swift in Sources */,
+				F92A29AD25B86AA100270D04 /* ReloadExpandableHeaderViewController.swift in Sources */,
 				F9E5E99A24EAC0C900D59C15 /* SFSymbolNameListCell.swift in Sources */,
 				F9F4F5B5259F515D00FB236B /* DatePickerContentView.swift in Sources */,
 				F97AD794250393C1006B9692 /* SingleSecExpandableListViewController.swift in Sources */,
