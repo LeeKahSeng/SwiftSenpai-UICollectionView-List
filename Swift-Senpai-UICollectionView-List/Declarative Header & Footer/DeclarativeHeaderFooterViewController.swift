@@ -101,7 +101,7 @@ class DeclarativeHeaderFooterViewController: UIViewController {
         }
         
         let footerRegistration = UICollectionView.SupplementaryRegistration
-        <UICollectionViewListCell>(elementKind: UICollectionView.elementKindSectionHeader) {
+        <UICollectionViewListCell>(elementKind: UICollectionView.elementKindSectionFooter) {
             [unowned self] (footerView, elementKind, indexPath) in
             
             let headerItem = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
