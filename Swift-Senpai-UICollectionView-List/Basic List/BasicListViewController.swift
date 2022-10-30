@@ -56,7 +56,7 @@ class BasicListViewController: UIViewController {
             }
             
             // Create action 1
-            let action1 = UIContextualAction(style: .normal, title: "Action 1") { (action, view, completion) in
+            let action1 = UIContextualAction(style: .normal, title: "Action 1") { [unowned self] (action, view, completion) in
                 
                 // Handle swipe action by showing an alert message
                 handleSwipe(for: action, item: item)
@@ -67,7 +67,7 @@ class BasicListViewController: UIViewController {
             action1.backgroundColor = .systemGreen
             
             // Create action 2
-            let action2 = UIContextualAction(style: .normal, title: "Action 2") { (action, view, completion) in
+            let action2 = UIContextualAction(style: .normal, title: "Action 2") { [unowned self] (action, view, completion) in
                 
                 // Handle swipe action by showing alert message
                 handleSwipe(for: action, item: item)
